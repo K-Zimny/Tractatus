@@ -1,0 +1,775 @@
+/*
+Theme Name: Tractatus
+Theme URI: 
+Author: Ken Zimny 
+Author URI: 
+Description: Theme for the tractatus site
+Requires at least: 4.9.6
+Tested up to: 5.6
+Requires PHP: 5.6.2
+Version: 1.2.9
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template: seedlet
+Text Domain: tractatus
+Tags: one-column, accessibility-ready, custom-colors, editor-style, featured-images, rtl-language-support, sticky-post, translation-ready
+
+Tractatus WordPress Theme, (C) 2021 Tractatus, LLC.
+Tractatus is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+Tractatus is a modification of the Blank Canvas child theme derived from Seedlet. 2020-2021 Automattic
+Seedlet is distributed under the terms of the GNU GPL v2 or later.
+
+Images from stocksnap.io
+License: CC0
+- Sarah Pflug: https://stocksnap.io/photo/hand-sign-BPQSX1BQTF
+- Clem Onojeghuo: https://stocksnap.io/photo/beanie-scarf-M2U9VL0ZWG
+- Brooke Cagle: https://stocksnap.io/photo/people-woman-MU7G67710S
+- Daria Shevtsova: https://stocksnap.io/photo/girl-camera-AZED07HITL
+- Benjamin Voros: https://stocksnap.io/photo/blue-denim-BWPRK5DEF0
+- Artsy Crafty: https://stocksnap.io/photo/office-supplies-BDVUKQ4BBF
+- Artsy Crafty: https://stocksnap.io/photo/colorful-pencils-NONEDF6REB
+- Austin Neill: https://stocksnap.io/photo/concert-singer-F66MXRQS1K
+- Bruce Mars: https://stocksnap.io/photo/woman-sunglasses-MO7PZ7AYIC
+Used as block pattern images.
+
+Image from foodiesfeed.com
+License: CC0
+https://www.foodiesfeed.com/free-food-photo/watermelon-juice-2/
+Used as block pattern image.
+
+Hamburger Icon from Noto Emoji
+License: Apache License 2.0
+https://github.com/googlefonts/noto-emoji/blob/master/svg/emoji_u1f354.svg
+Modified and used as a block pattern image.
+*/
+
+@import "variables.css";
+
+/* Remove extra margin from articles on single post pages. */
+
+.single .site-main > article,
+.page .site-main > article {
+	margin-bottom: 0;
+}
+
+/* Remove some top padding if the first block on the page is a full-width image, cover, media & text, or group block. */
+
+.single.hide-post-and-page-titles .entry-content > .wp-block-image.alignfull:first-child,
+.page.hide-post-and-page-titles .entry-content > .wp-block-image.alignfull:first-child,
+.single.hide-post-and-page-titles .entry-content > .wp-block-cover.alignfull:first-child,
+.page.hide-post-and-page-titles .entry-content > .wp-block-cover.alignfull:first-child,
+.single.hide-post-and-page-titles .entry-content > .wp-block-media-text.alignfull:first-child,
+.page.hide-post-and-page-titles .entry-content > .wp-block-media-text.alignfull:first-child,
+.single.hide-post-and-page-titles .entry-content > .wp-block-group.has-background.alignfull:first-child,
+.page.hide-post-and-page-titles .entry-content > .wp-block-group.has-background.alignfull:first-child {
+	margin-top: calc(-1 * var(--global--spacing-vertical));
+}
+
+/* Remove some bottom padding if the last block on the page is a full-width image, cover, media & text, or group block. */
+
+.page.hide-site-footer .entry-content > .wp-block-image.alignfull:last-child,
+.page.hide-site-footer .entry-content > .wp-block-cover.alignfull:last-child,
+.page.hide-site-footer .entry-content > .wp-block-media-text.alignfull:last-child,
+.single.hide-site-footer.hide-site-footer .entry-content > .wp-block-group.has-background.alignfull:last-child,
+.single.hide-site-footer.hide-comments .entry-content > .wp-block-image.alignfull:last-child,
+.single.hide-site-footer.hide-comments .entry-content > .wp-block-cover.alignfull:last-child,
+.single.hide-site-footer.hide-comments .entry-content > .wp-block-media-text.alignfull:last-child,
+.single.hide-site-footer.hide-comments .entry-content > .wp-block-group.has-background.alignfull:last-child {
+	margin-bottom: calc(-1 * var(--global--spacing-vertical));
+}
+
+/* Center-align headers and footers. */
+
+.entry-header,
+.page-title,
+.entry-footer,
+.site-info,
+.footer-menu {
+	text-align: center;
+}
+
+/* ============================================================================================================================================================== */
+/* * */
+/* * */
+/* * */
+/* * */
+/* * */
+/* =========================Begin Tractatus Theme========================= */
+/* * */
+/* * */
+/* * */
+/* * */
+/* * */
+/* * */
+/* ============================================================================================================================================================== */
+
+/* ============================================================================================================================================================== */
+/* Theme overrides */
+/* ============================================================================================================================================================== */
+
+
+ .default-max-width, hr.wp-block-separator.is-style-wide, .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
+ *[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce),
+ .wp-block-template-part > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.entry-attachment):not(.woocommerce), .entry-content .wp-audio-shortcode, .post-thumbnail, .navigation {
+   max-width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ @media only screen and (min-width: 482px) {
+  .wp-block-group .wp-block-group__inner-container > * {
+      margin-top: revert;
+      margin-bottom: revert;
+  }
+}
+
+
+/* ============================================================================================================================================================== */
+/* General Styles */
+/* ============================================================================================================================================================== */
+
+body {
+    background: #FFFEFA;
+    color: #4B4B4B; 
+}
+
+/* ============================================================================================================================================================== */
+/* Typography */
+/* ============================================================================================================================================================== */
+
+h1 strong{
+  font-family: 'Raleway', sans-serif;
+  font-size: 90px;
+  font-weight: bold;
+  line-height: 110px;
+  letter-spacing: 0px;
+  color: #FFF;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: #FFF;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  color: #FFF;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 37px;
+  letter-spacing: 0px;  
+}
+
+h1 strong:nth-child(3) {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 110px;
+  letter-spacing: 0px;
+  color: #FFA2A2; 
+  -webkit-text-fill-color: #FFA2A2; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0;
+  -webkit-text-stroke-color: transparent;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 86px;
+  font-weight: bold;
+  line-height: 100px;
+  letter-spacing: 0px;
+  color: #000;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: #4B4B4B;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 35px;
+}
+
+
+/* ============================================================================================================================================================== */
+/* Widths */
+/* ============================================================================================================================================================== */
+
+/********** Site container widths ***********/
+
+.fixed-1440 {
+  max-width: 1440px !important;
+  width: 95% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.fixed-1220 {
+  max-width: 1220px !important;
+  width: 95% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .fixed-1440,
+  .fixed-1220 {
+    width: 85% !important;
+  }
+
+}
+
+/*========= end site container widths =========*/
+
+/********** widths ***********/
+
+/* width pct */
+
+.width-10pct {
+  width: 10% !important;
+  max-width: 100% !important;
+}
+
+.width-20pct {
+  width: 20% !important;
+  max-width: 100% !important;
+}
+
+.width-30pct {
+  width: 30% !important;
+  max-width: 100% !important;
+}
+
+.width-40pct {
+  width: 40% !important;
+  max-width: 100% !important;
+}
+
+.width-50pct {
+  width: 50% !important;
+  max-width: 100% !important;
+}
+
+.width-60pct {
+  width: 60% !important;
+  max-width: 100% !important;
+}
+
+.width-70pct {
+  width: 70% !important;
+  max-width: 100% !important;
+}
+
+.width-80pct {
+  width: 80% !important;
+  max-width: 100% !important;
+}
+
+.width-90pct {
+  width: 90% !important;
+  max-width: 100% !important;
+}
+
+.width-100pct {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* width px */
+.width-100 {
+  width: 100px !important;
+  max-width: 100% !important;
+}
+
+.width-200 {
+  width: 200px !important;
+  max-width: 100% !important;
+}
+
+.width-300 {
+  width: 300px !important;
+  max-width: 100% !important;
+}
+
+.width-400 {
+  width: 400px !important;
+  max-width: 100% !important;
+}
+
+.width-500 {
+  width: 500px !important;
+  max-width: 100% !important;
+}
+
+.width-600 {
+  width: 600px !important;
+  max-width: 100% !important;
+}
+
+.width-700 {
+  width: 700px !important;
+  max-width: 100% !important;
+}
+
+.width-800 {
+  width: 800px !important;
+  max-width: 100% !important;
+}
+
+.width-900 {
+  width: 900px !important;
+  max-width: 100% !important;
+}
+
+.width-1000 {
+  width: 1000px !important;
+  max-width: 100% !important;
+}
+
+.width-1100 {
+  width: 1100px !important;
+  max-width: 100% !important;
+}
+
+.width-1200 {
+  width: 1200px !important;
+  max-width: 100% !important;
+}
+
+.width-1300 {
+  width: 1300px !important;
+  max-width: 100% !important;
+}
+
+.width-1400 {
+  width: 1400px !important;
+  max-width: 100% !important;
+}
+
+/*========= end widths =========*/
+
+/* ============================================================================================================================================================== */
+/* Margins */
+/* ============================================================================================================================================================== */
+
+.margin-left-auto {
+  margin-left: auto !important;
+}
+
+.margin-right-auto {
+  margin-right: auto !important;
+}
+
+.margin-left_right-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.margin-top_bottom-md {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.margin-top-0 {
+  margin-top: 0;
+}
+
+.margin-top-50 {
+  margin-top: 50px;
+}
+
+.margin-top-100 {
+  margin-top: 100px;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
+
+.margin-bottom-50 {
+  margin-bottom: 50px;
+}
+
+.margin-bottom-100 {
+  margin-bottom: 100px;
+}
+
+/* ============================================================================================================================================================== */
+/* padding */
+/* ============================================================================================================================================================== */
+
+
+/* ============================================================================================================================================================== */
+/* Global Classes */
+/* ============================================================================================================================================================== */
+
+/********** Header section ***********/
+
+.page-header {
+ background: lightblue;
+}
+
+/*========= end Header section =========*/
+
+/********** Two columns with img ***********/
+
+.two-col_w-img-right h2,
+.two-col_w-img-left h2 {
+  margin-bottom: 0 !important; /*Why is this in conflict with the parent css?*/
+  position: relative;
+  z-index: 2;
+}
+
+.two-col_w-img-right .wp-block-columns,
+.two-col_w-img-left .wp-block-columns  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.two-col_w-img-right .wp-block-column:first-child {
+  background-image: linear-gradient(to right, rgb(129, 216, 255,1), rgb(255, 254, 255, 1)); 
+  margin-top: -50px;
+  margin-left: 75px; 
+  padding: 75px 25px;
+}
+
+.two-col_w-img-left .wp-block-column:nth-child(2) {
+  background-image: linear-gradient(to right, rgb(255, 180, 78,1), rgb(255, 254, 250, 1)); 
+  margin-top: -50px;
+  margin-right: 75px; 
+  padding: 75px 25px;
+}
+
+.two-col_w-img-right p,
+.two-col_w-img-left p {
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 60px;  
+}
+
+/*========= end Two columns with photo =========*/
+
+/********** Img Banner ***********/
+
+.img-banner {
+  background: url(imgs/smiley-bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.img-banner > .wp-block-group__inner-container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 600px;
+}
+
+.img-banner h2 {
+  font-size: 120px;
+}
+
+.img-banner h2 span:first-child {
+  position: relative;
+  bottom: 50px;
+}
+
+.img-banner h2 span:nth-child(2) {
+  position: relative;
+  top: 50px; 
+}
+
+/*========= end Img Banner =========*/
+
+
+
+
+/* ============================================================================================================================================================== */
+/* Homepage */
+/* ============================================================================================================================================================== */
+
+/********** Homepage Header section ***********/
+
+/* heading tags */
+
+.page-header .homepage-header h2 {
+  color: #000;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #FFFFFF;
+}
+
+.page-header .homepage-header h2:first-child {
+  font-size: 140px;
+}
+
+.page-header .homepage-header .wp-block-column h2 {
+  font-size: 100px;
+  line-height: 50px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+/* column styles */
+
+.page-header .homepage-header .wp-block-column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-header .homepage-header .wp-block-column:nth-child(2) p {
+  color: #FFF;
+  font-size: 66px;
+  font-weight: normal;
+  line-height: 66px;
+}
+
+.page-header .homepage-header .wp-block-column:nth-child(2) p strong {
+  font-weight: normal;
+  color: #000;
+}
+
+/*========= end Homepage Header section =========*/
+
+
+/********** Homepage Sub Header section ***********/
+
+.homepage-subheader h2 {
+  margin-bottom: 125px;
+}
+
+.homepage-subheader p {
+  margin-top: 125px;
+  padding: 0 50px;
+  font-size: 66px;
+  font-weight: bold;
+  line-height: 75px;
+} 
+
+.homepage-subheader p strong:first-child {
+  color: #24D5C3;
+}
+
+.homepage-subheader p strong:nth-child(2) {
+  color: #FFB44E;  
+}
+
+.homepage-subheader p strong:nth-child(3) {
+  color: #FFA2A2; 
+}
+
+.homepage-subheader p strong:nth-child(4) {
+  color: #818BFF;  
+}
+
+/*========= end Sub Homepage Header section =========*/
+
+/********** Services Section ***********/
+
+/* service banner */
+
+.services > .wp-block-group__inner-container > .wp-block-group:first-child {
+  background-image: linear-gradient(to right, rgb(129, 216, 255,1), rgb(255, 254, 255, 1));   
+}
+
+.services h2 strong{
+  font-size: 223px;
+  line-height: 44px; 
+  color: #4A4A4A; 
+  -webkit-text-fill-color: transparent; 
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: #4A4A4A;
+}
+
+.services h2 {
+  padding-top: 100px;
+  font-size: 66px;
+  line-height: 66px;   
+  color: #4A4A4A; 
+  -webkit-text-fill-color: #4A4A4A; 
+  -webkit-text-stroke-width: 0;
+  -webkit-text-stroke-color: transparent;
+}
+
+.services h2 strong:nth-child(4) {
+  font-size: 66px;
+  line-height: 44px; 
+  color: #FFD154; 
+  -webkit-text-fill-color: #FFD154; 
+  -webkit-text-stroke-width: 0;
+  -webkit-text-stroke-color: transparent;
+}
+
+/* Services flex container and items */
+
+.services .flex-container > .wp-block-group__inner-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.services .flex-container > .wp-block-group__inner-container .wp-block-group {
+  width: 550px;
+  margin: 50px !important;
+}
+
+.services h3 {
+  position: relative;
+  z-index: 1;
+  font-size: 90px;
+  line-height: 110px;  
+  margin-bottom: 0;
+}
+
+.services h3::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 280px;
+  height: 125px;
+  left: 125px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.services .wp-block-group:first-child h3::after {
+  background-image: linear-gradient(to right, #FF5353, #FFFEFA) !important; 
+}
+
+.services .wp-block-group:nth-child(2) h3::after {
+  background-image: linear-gradient(to right, #644EFF, #FFFEFA); 
+}
+
+.services .wp-block-group:nth-child(3) h3::after {
+  background-image: linear-gradient(to right, #FFCC43, #FFFEFA); 
+}
+
+.services .wp-block-group:nth-child(4) h3::after {
+  background-image: linear-gradient(to right, #777777, #FFFEFA); 
+}
+
+.services .wp-block-group:nth-child(5) h3::after {
+  background-image: linear-gradient(to right, #93FAFF, #FFFEFA); 
+}
+
+.services .wp-block-group:nth-child(6) h3::after {
+  background-image: linear-gradient(to right, #FFB44E, #FFFEFA); 
+}
+
+.services .flex-container > .wp-block-group__inner-container p {
+  font-size: 30px;
+  line-height: 37px;  
+  margin-top: 0;
+}
+
+/*========= end Services Section =========*/
+
+/********** Homepage Contact Form ***********/
+
+.contact h2 {
+  font-size: 60px;
+  line-height: 73px;   
+  color: #4A4A4A; 
+  -webkit-text-fill-color: #4A4A4A; 
+  -webkit-text-stroke-width: 0;
+  -webkit-text-stroke-color: transparent;
+  position: relative;
+  margin-bottom: 10px !important;
+}
+
+.contact h2::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 335px;
+  height: 85px;
+  left: 40px;
+  top: 70%;
+  transform: translateY(-50%);
+  background-image: linear-gradient(to right, #A0FFCA, #FFFEFA); 
+}
+
+/* wpform styles */
+
+.wpforms-field {
+  padding: 20px 0 !important;
+}
+
+.wpforms-field-label {
+  font-family: monospace !important;
+  font-size: 30px !important; 
+  font-weight: normal !important;
+  line-height: 37px !important;   
+  color: #4A4A4A !important;   
+}
+
+.wpforms-required-label {
+  opacity: 0 !important;
+}
+
+.wpforms-container input,
+.wpforms-container textarea {
+  font-size: 22px !important;
+  font-family: monospace !important;  
+  background: transparent !important;
+}
+
+
+.wpforms-container input {
+  width: 380px !important;
+  max-width: 100% !important;
+  border: none !important;
+  border-bottom: 1px solid #707070 !important;
+}
+
+.wpforms-container textarea {
+  border: 1px solid #707070 !important;
+  min-height: 400px !important; 
+  margin-top: 20px !important;
+  resize: none !important;
+}
+
+.wpforms-submit-container {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.wpforms-submit-container button {
+  padding: 25px 100px !important;
+  background: transparent !important;
+  border: 1px solid #707070 !important;
+  font-size: 30px !important;
+  color: #000 !important;
+  -webkit-text-fill-color: transparent !important; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px !important;
+  -webkit-text-stroke-color: #707070 !important;
+  transition: all ease .3s;
+}
+
+
+.wpforms-submit-container button:hover,
+.wpforms-submit-container button:active,
+.wpforms-submit-container button:focus {
+  transform: scale(1.05) !important;
+  background-color: #dafdea !important;
+}
+
+
+/*========= end  Homepage Contact Form =========*/
+
+
+
