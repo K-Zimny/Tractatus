@@ -414,7 +414,54 @@ p {
 /* Global Classes */
 /* ============================================================================================================================================================== */
 
+/********** Logo and Nav ***********/
+
+.site-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #393939;
+  padding: 0 !important;
+}
+
+.site-branding {
+  margin-bottom: 0 !important;
+}
+
+.site-logo {
+  width: 100px;
+}
+
+/* mega menu */
+
+#mega-menu-wrap-primary {
+  background: transparent !important;
+}
+
+.mega-menu-link {
+  background: transparent !important;
+}
+
+.primary-navigation {
+  margin-top: 0 !important;
+  margin-left: auto !important;
+}
+
+/*========= end Logo and Nav =========*/
+
 /********** Header section ***********/
+
+.entry-content {
+  margin-top: 0 !important;
+}
+
+.site-main {
+  padding-top: 0 !important;
+}
+
+.type-page header {
+  display: none;
+}
 
 .page-header {
  background: lightblue;
