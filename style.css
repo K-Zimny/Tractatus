@@ -148,7 +148,9 @@ body {
 /* Typography */
 /* ============================================================================================================================================================== */
 
-h1 strong{
+h1 strong {
+  display: block;
+  margin-bottom: -70px;
   font-family: 'Montserrat', sans-serif;
   font-size: 90px;
   font-weight: bold;
@@ -161,6 +163,7 @@ h1 strong{
 }
 
 h1 {
+  margin-bottom: 0px !important;
   font-family: 'Montserrat', sans-serif;
   color: #FFF;
   font-size: 30px;
@@ -170,6 +173,7 @@ h1 {
 }
 
 h1 strong:nth-child(3) {
+  display: inline;
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   font-weight: bold;
@@ -424,6 +428,8 @@ p {
   padding: 0 !important;
 }
 
+/* Logo */
+
 .site-branding {
   margin-bottom: 0 !important;
 }
@@ -434,6 +440,11 @@ p {
 
 /* mega menu */
 
+.primary-navigation {
+  margin-top: 0 !important;
+  margin-left: auto !important;
+}
+
 #mega-menu-wrap-primary {
   background: transparent !important;
 }
@@ -442,10 +453,28 @@ p {
   background: transparent !important;
 }
 
-.primary-navigation {
-  margin-top: 0 !important;
-  margin-left: auto !important;
+a.mega-menu-link,
+a.mega-menu-link:visited {
+  margin: 0 20px !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 30px !important;
+  font-weight: normal !important;
+  line-height: 37px !important;
+  letter-spacing: 0px !important;
+  color: #fff !important;
+  -webkit-text-fill-color: transparent !important; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px !important;
+  -webkit-text-stroke-color: #fff !important;
 }
+
+a.mega-menu-link:hover,
+a.mega-menu-link:focus,
+a.mega-menu-link:active {
+  border-bottom: 1px solid #fff !important;
+}
+
+
+
 
 /*========= end Logo and Nav =========*/
 
@@ -467,6 +496,62 @@ p {
   background: linear-gradient(to right,#2f5d732f, #7cccec70, #ead2d273, #ff848473), url(imgs/header-grad-bg.jpg);
   background-position: center;
   background-size: cover;
+  padding: 60px 0;
+}
+
+.page-header > .wp-block-group__inner-container > .wp-block-columns > .wp-block-column:first-child {
+  min-width: 475px;
+}
+
+.page-header > .wp-block-group__inner-container > .wp-block-columns > .wp-block-column:first-child .wp-block-group {
+  margin-top: 0 !important;
+}
+
+.page-header > .wp-block-group__inner-container > .wp-block-columns > .wp-block-column:first-child .wp-block-group p:first-child {
+  width: 400px;
+  max-width: 100%;
+  margin-left: 0 !important;
+  background: radial-gradient(#f5d0d0, #ff6a6a);
+  border-radius: 150px;
+  padding: 80px 45px;
+  border-bottom-right-radius: 0px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.page-header > .wp-block-group__inner-container > .wp-block-columns > .wp-block-column:first-child .wp-block-group p:nth-child(2) {
+  width: 400px;
+  max-width: 100%;
+  margin-left: 0 !important;
+  text-align: right;
+}
+
+.page-header > .wp-block-group__inner-container > .wp-block-columns > .wp-block-column:first-child .wp-block-group p:nth-child(2) a,
+.page-header > .wp-block-group__inner-container > .wp-block-columns > .wp-block-column:first-child .wp-block-group p:nth-child(2) a:visited {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 15px;
+  color: #fff;
+  text-decoration: none !important;
+  border: none;
+  padding: 10px 0;
+}
+
+.page-header > .wp-block-group__inner-container > .wp-block-columns > .wp-block-column:first-child .wp-block-group p:nth-child(2) a::after {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  content: "";
+  width: 70%;
+  height: 18px;
+  background-color: #FFA2A2;
+  transition: all ease 0.3s;
+}
+
+.page-header > .wp-block-group__inner-container > .wp-block-columns > .wp-block-column:first-child .wp-block-group p:nth-child(2) a:hover::after {
+  width: 100%;  
 }
 
 /*========= end Header section =========*/
@@ -560,35 +645,63 @@ p {
 }
 
 .page-header .homepage-header h2:first-child {
-  font-size: 140px;
+  font-size: 170px;
+  margin-top: 30px;
 }
 
 .page-header .homepage-header .wp-block-column h2 {
-  font-size: 100px;
+  font-size: 110px;
   line-height: 50px;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
+  margin-top: 50px;
+  margin-left: 30px;
 }
 
 /* column styles */
 
 .page-header .homepage-header .wp-block-column:nth-child(2) {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  margin-left: 60px;
 }
 
 .page-header .homepage-header .wp-block-column:nth-child(2) p {
+  position: relative;
+  z-index: 1;
+  width: 550px;
+  max-width: 100%;
+  margin-top: 20px;
+  padding: 90px 60px;
+  box-sizing: content-box;
   color: #FFF;
-  font-size: 66px;
-  font-weight: normal;
-  line-height: 66px;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 50px;
 }
 
 .page-header .homepage-header .wp-block-column:nth-child(2) p strong {
+  position: relative;
+  z-index: 1;
   font-weight: normal;
   color: #000;
 }
+
+.page-header .homepage-header .wp-block-column:nth-child(2) p::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(to right, rgb(255, 137, 0, .19), rgb(187, 172, 130, .1));;
+  opacity: 1;
+  backdrop-filter: blur(27px);
+  -webkit-backdrop-filter: blur(27px);  
+}
+
 
 /*========= end Homepage Header section =========*/
 
