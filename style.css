@@ -149,17 +149,21 @@ body {
 /* ============================================================================================================================================================== */
 
 h1 strong {
-  display: block;
-  margin-bottom: -70px;
+  display: inline-block;
+  /* margin-bottom: -70px; */
   font-family: 'Montserrat', sans-serif;
   font-size: 90px;
   font-weight: bold;
-  line-height: 140px;
+  line-height: 110px;
   letter-spacing: 0px;
   color: #FFF;
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 4px;
   -webkit-text-stroke-color: #FFF;
+}
+
+h1 strong:nth-of-type(2) {
+  margin-bottom: -70px !important;
 }
 
 h1 {
@@ -419,16 +423,16 @@ a:hover {
 /* - */
 
 .margin-top_bottom-lg {
-  margin-top: 200px !important;
-  margin-bottom: 200px !important;
+  margin-top: 170px !important;
+  margin-bottom: 170px !important;
 }
 
 .margin-top-lg {
-  margin-top: 200px !important;
+  margin-top: 170px !important;
 }
 
 .margin-bottom-lg {
-  margin-bottom: 200px !important;
+  margin-bottom: 170px !important;
 }
 
 /* - */
@@ -857,13 +861,12 @@ a.mega-menu-link:active {
 .services .services-container > .wp-block-group__inner-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-
 }
 
 .services .services-container > .wp-block-group__inner-container .wp-block-group {
   width: 400px;
   height: 100%;
-  padding: 50px 0;
+  padding: 0 0 50px;
 }
 
 .services .services-container > .wp-block-group__inner-container .wp-block-group > .wp-block-group__inner-container {
