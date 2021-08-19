@@ -150,15 +150,13 @@ body {
 
 h1 strong {
   display: inline-block;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Source Code Pro', monospace;;
+  color: #1F1F1F;
   font-size: 90px;
   font-weight: bold;
   line-height: 110px;
   letter-spacing: 0px;
-  color: #FFF;
-  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color: #FFF;
+  word-break: normal;
 }
 
 h1 strong:nth-of-type(2) {
@@ -167,7 +165,7 @@ h1 strong:nth-of-type(2) {
 
 h1 {
   margin-bottom: 0px !important;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Source Code Pro', monospace;;
   color: #FFF;
   font-size: 30px;
   font-weight: bold;
