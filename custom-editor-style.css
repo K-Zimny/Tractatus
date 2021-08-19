@@ -23,6 +23,12 @@ h1::before {
     padding: 15px;
 }
 
+/* video styles */
+
+.wp-block-video video {
+    max-width: 300px !important;
+}
+
 /* column styles */
 
 .block-editor-block-list__block.wp-block.wp-block-columns {

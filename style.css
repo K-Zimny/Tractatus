@@ -1147,7 +1147,7 @@ a.mega-menu-link:active {
 /* container and grid  */
 
 .service-page-grid-container {
-  padding: 20px 0 0px; 
+  padding: 20px 0 20px; 
   background: #4A4A4A;
   color: #fff;
 }
@@ -1189,17 +1189,9 @@ a.mega-menu-link:active {
   -webkit-text-stroke-color: transparent;
   display: inline;
   position: relative;
+  text-decoration: underline;
 }
 
-.service-page-grid-container h2:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 5px;
-  width: 100%;
-  height: 2px;
-  background: #fff;
-}
 
 /* imgs */
 
@@ -1228,6 +1220,12 @@ img {
   background: #fff;
 }
 
+/* h1, title two lines */
+
+.service-page-grid-container.title-two-lines h1 {
+  grid-row: 1/3;
+}
+
 /* abstract corner img */
 
 .service-page-grid-container figure:first-of-type {
@@ -1246,6 +1244,7 @@ img {
 
 .service-page-grid-container .fixed-site-width .wp-block-group__inner-container .wp-block-group:first-of-type {
   grid-row: 2/end;
+  grid-column: 1/2;
   width: 400px;
   max-width: 100%;
   margin-top: 40px;
@@ -1256,6 +1255,12 @@ img {
   font-size: 24px;
   line-height: 30px;
   font-weight: normal;
+}
+
+/* p detail text, title two lines */
+
+.service-page-grid-container.title-two-lines .fixed-site-width .wp-block-group__inner-container .wp-block-group:first-of-type {
+  grid-row: 3/end;
 }
 
 /* icon img/vid asset */
@@ -1272,6 +1277,13 @@ img {
   width: 100%;
   height: 100%;
 }
+
+/* icon img/vid asset, title two lines */
+
+.service-page-grid-container.title-two-lines figure:nth-of-type(2) {
+  grid-row: 5/end;
+}
+
 
 /* h2 bullet point block */
 
@@ -1319,4 +1331,29 @@ img {
 
 #ux-design-grid.service-page-grid-container li::marker {
   color: #ff9493;
+}
+
+/* ui design */
+
+#ui-design-grid.service-page-grid-container h1:after {
+  background: #9c8efd;
+}
+
+#ui-design-grid.service-page-grid-container li::marker {
+  color: #9c8efd;
+}
+
+/* web dev */
+
+#dev-grid.service-page-grid-container h1:after {
+  background: #ffcd46;
+  bottom: -30px; /*Needs to be 10px lower to becuase of the letter "p" in development.*/
+}
+
+#dev-grid.service-page-grid-container .fixed-site-width .wp-block-group__inner-container .wp-block-group:first-of-type {
+  margin-top: 50px;  /*Needs to be 10px higher to becuase of the letter "p" in development.*/
+}
+
+#dev-grid.service-page-grid-container li::marker {
+  color: #ffcd46;
 }
