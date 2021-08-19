@@ -9,8 +9,10 @@ $header_classes .= $has_primary_nav ? ' has-menu' : '';
 
 <?php if ( true === get_theme_mod( 'show_site_header', false ) ) : ?>
 	<header id="masthead" class="<?php echo $header_classes; ?>" role="banner">
-		<?php get_template_part( 'template-parts/header/site-branding' ); ?>
-		<?php get_template_part( 'template-parts/header/navigation' ); ?>
+		<div class="fixed-site-width">
+			<?php get_template_part( 'template-parts/header/site-branding' ); ?>
+			<?php get_template_part( 'template-parts/header/navigation' ); ?>
+		</div>
 	</header><!-- #masthead -->
 <?php elseif ( ! is_singular() ) : ?>
 	<header id="masthead" class="<?php echo $header_classes; ?>" role="banner">

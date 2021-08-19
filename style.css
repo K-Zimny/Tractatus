@@ -150,7 +150,6 @@ body {
 
 h1 strong {
   display: inline-block;
-  /* margin-bottom: -70px; */
   font-family: 'Montserrat', sans-serif;
   font-size: 90px;
   font-weight: bold;
@@ -479,11 +478,14 @@ a:hover {
 /********** Logo and Nav ***********/
 
 .site-header {
+  background: #393939;
+  padding: 0 !important;  
+}
+
+.site-header .fixed-site-width {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background: #393939;
-  padding: 0 !important;
 }
 
 /* Logo */
@@ -611,6 +613,64 @@ a.mega-menu-link:active {
 .page-header > .wp-block-group__inner-container > .wp-block-columns > .wp-block-column:first-child .wp-block-group p:nth-child(2) a:hover::after, .page-header > .wp-block-group__inner-container > .wp-block-columns > .wp-block-column:first-child .wp-block-group p:nth-child(2) a:active::after, .page-header > .wp-block-group__inner-container > .wp-block-columns > .wp-block-column:first-child .wp-block-group p:nth-child(2) a:focus::after{
   width: 100%;  
 }
+
+/***** alt header content *****/
+
+.page-header .alt-header-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+}
+
+.page-header .alt-header-content::before {
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(to right, rgb(0, 177, 255, .47), rgba(124, 249, 232, .1));;
+  opacity: 1;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);  
+}
+
+/* heading tags */
+
+.page-header .alt-header-content h2 {
+  color: #000;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #FFFFFF;  
+}
+
+.page-header .alt-header-content h2:first-child {
+  font-size: 100px;
+  margin-top: 30px;
+}
+
+.page-header .alt-header-content .wp-block-column h2 {
+  font-size: 140px;
+  line-height: 50px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+/* content */
+
+.page-header .alt-header-content p {
+  font-weight: 600;
+  color: #4B4B4B;  
+}
+
+.page-header .alt-header-content p strong {
+  color: #fff;  
+}
+
+/***** end alt header content *****/
 
 /*========= end Header section =========*/
 
@@ -750,7 +810,7 @@ a.mega-menu-link:active {
   position: relative;
   z-index: 1;
   font-weight: normal;
-  color: #000;
+  color: #4B4B4B;
 }
 
 .page-header .homepage-header .wp-block-column:nth-child(2) p::before {
@@ -763,8 +823,8 @@ a.mega-menu-link:active {
   z-index: -1;
   background: linear-gradient(to right, rgb(255, 137, 0, .19), rgb(187, 172, 130, .1));;
   opacity: 1;
-  backdrop-filter: blur(27px);
-  -webkit-backdrop-filter: blur(27px);  
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);  
 }
 
 
@@ -832,7 +892,7 @@ a.mega-menu-link:active {
   line-height: 44px; 
   color: #4A4A4A; 
   -webkit-text-fill-color: transparent; 
-  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-width: 6px;
   -webkit-text-stroke-color: #4A4A4A;
 }
 
@@ -907,7 +967,7 @@ a.mega-menu-link:active {
 }
 
 .services .wp-block-group:first-child h3::after {
-  background-image: linear-gradient(to right, #FF5353, #FFFEFA) !important; 
+  background-image: linear-gradient(to right, #ff9493, #FFFEFA) !important; 
 }
 
 .services .wp-block-group:nth-child(2) h3::after {
@@ -955,7 +1015,7 @@ a.mega-menu-link:active {
 
 
 .services .services-container > .wp-block-group__inner-container > .wp-block-group:first-child :after {
-  background-color: #FF5353;
+  background-color: #ff9493;
 }
 
 .services .services-container > .wp-block-group__inner-container > .wp-block-group:nth-child(2) :after {
@@ -1076,8 +1136,187 @@ a.mega-menu-link:active {
   background-color: #dafdea !important;
 }
 
-
 /*========= end Homepage Contact Form =========*/
 
+/* ============================================================================================================================================================== */
+/* Service Pages */
+/* ============================================================================================================================================================== */
 
+/********** Grid styles top page container, global ***********/
 
+/* container and grid  */
+
+.service-page-grid-container {
+  padding: 20px 0 0px; 
+  background: #4A4A4A;
+  color: #fff;
+}
+
+.service-page-grid-container .fixed-site-width {
+  max-width: 1600px !important;
+}
+
+.service-page-grid-container .fixed-site-width > .wp-block-group__inner-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(400px, 1fr));
+  grid-template-rows: repeat(9, 100px);
+}
+
+/* text */
+
+.service-page-grid-container h1,
+.service-page-grid-container h2,
+.service-page-grid-container p {
+  color: #fff;
+}
+
+.service-page-grid-container h1 {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 90px;
+  font-weight: bold;
+  line-height: 110px;
+  letter-spacing: 0px;
+  color: #FFF;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #FFF;
+}
+
+.service-page-grid-container h2 {
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke-width: 0;
+  -webkit-text-stroke-color: transparent;
+  display: inline;
+  position: relative;
+}
+
+.service-page-grid-container h2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+/* imgs */
+
+img {
+  filter: none !important;
+}
+
+/* grid items */
+
+/* h1 */
+
+.service-page-grid-container h1 {
+  grid-column: 1/3;  
+  margin-left: 0 !important;
+  position: relative;
+}
+
+.service-page-grid-container h1:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  margin-left: 20%;
+  width: 80%;
+  height: 7px;
+  background: #fff;
+}
+
+/* abstract corner img */
+
+.service-page-grid-container figure:first-of-type {
+    grid-row: 1/4;
+    grid-column: 3;
+    margin-right: 0 !important; 
+    width: auto;
+}
+
+.service-page-grid-container figure:first-of-type img {
+  height: 100%;
+  width: 100%;
+}
+
+/* p detail text */
+
+.service-page-grid-container .fixed-site-width .wp-block-group__inner-container .wp-block-group:first-of-type {
+  grid-row: 2/end;
+  width: 400px;
+  max-width: 100%;
+  margin-top: 40px;
+  margin-left: 0 !important;
+}
+
+.service-page-grid-container .fixed-site-width .wp-block-group__inner-container .wp-block-group:first-of-type p {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+/* icon img/vid asset */
+
+.service-page-grid-container figure:nth-of-type(2) {
+  grid-row: 4/end;
+  margin: 0;
+  width: 75%;
+  max-width: 360px !important;
+  transform: translateY(-20%);
+}
+
+.service-page-grid-container figure:nth-of-type(2) img {
+  width: 100%;
+  height: 100%;
+}
+
+/* h2 bullet point block */
+
+.service-page-grid-container .fixed-site-width .wp-block-group__inner-container .wp-block-group:nth-of-type(2) {
+  grid-column: 3/end;
+  grid-row: 4/end;
+  width: 482px;
+  max-width: 100%;
+  margin-right: 0 !important;
+}
+
+.service-page-grid-container h2 {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 66px;
+}
+
+.service-page-grid-container ul {
+  padding-left: 25px;
+}
+
+.service-page-grid-container li {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 35px;
+}
+
+.service-page-grid-container .fixed-site-width .wp-block-group__inner-container .wp-block-group:nth-of-type(2) p {
+  width: 300px;
+  max-width: 100%;
+  margin: 35px 0 0 0 !important;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/*========= end Grid styles for top page container, global =========*/
+
+/********** Grid styles for top page container, page specific ***********/
+
+/* ux design */
+
+#ux-design-grid.service-page-grid-container h1:after {
+  background: #ff9493;
+}
+
+#ux-design-grid.service-page-grid-container li::marker {
+  color: #ff9493;
+}
