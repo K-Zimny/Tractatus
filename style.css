@@ -140,7 +140,7 @@ Modified and used as a block pattern image.
 /* ============================================================================================================================================================== */
 
 body {
-    background: #FFFEFA;
+    background: #1F1F1F;
     color: #4B4B4B;  
 }
 
@@ -150,12 +150,10 @@ body {
 
 h1 strong {
   display: inline-block;
-  font-family: 'Source Code Pro', monospace;;
+  font-family: 'Source Code Pro', monospace;
   color: #1F1F1F;
   font-size: 90px;
-  font-weight: bold;
   line-height: 110px;
-  letter-spacing: 0px;
   word-break: normal;
 }
 
@@ -164,60 +162,51 @@ h1 strong:nth-of-type(2) {
 }
 
 h1 {
-  margin-bottom: 0px !important;
-  font-family: 'Source Code Pro', monospace;;
-  color: #FFF;
+  font-family: 'Source Code Pro', monospace;
+  color: #1F1F1F;
   font-size: 30px;
   font-weight: bold;
   line-height: 37px;
   letter-spacing: 0px;  
+  margin-bottom: 0px !important;
 }
 
 h1 strong:last-of-type {
   display: inline;
-  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
-  font-weight: bold;
-  line-height: 110px;
-  letter-spacing: 0px;
-  color: #FFA2A2; 
-  -webkit-text-fill-color: #FFA2A2; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 0;
-  -webkit-text-stroke-color: transparent;
+  color: #FFDB79; 
+
 }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Source Code Pro', monospace;
+  color: #FFFFFF;
   font-size: 75px;
   font-weight: bold;
   line-height: 100px;
   letter-spacing: 0px;
-  color: #000;
-  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color: #4B4B4B;
+
 }
 
 p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Source Code Pro', monospace;
   font-size: 30px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 35px;
-  color: #4A4A4A;
+  color: #FFFFFF;
 }
 
 a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Source Code Pro', monospace;
   font-size: 30px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 35px;  
   border: none;
-  color: #4A4A4A;
+  color: #FFFFFF;
 }
 
 a:hover {
-  color: #000;
-  color: #4A4A4A;
+  color: #FFFFFF;
 }
 
 /* ============================================================================================================================================================== */
@@ -551,10 +540,14 @@ a.mega-menu-link:active {
 }
 
 .page-header {
-  background: linear-gradient(to right,#2f5d732f, #7cccec70, #ead2d273, #ff848473), url(imgs/header-grad-bg.jpg);
+  background: url(imgs/header-bg.jpg);
   background-position: center;
   background-size: cover;
   padding: 60px 0;
+}
+
+.page-header h2 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .page-header > .wp-block-group__inner-container > .wp-block-columns > .wp-block-column:first-child {
@@ -634,7 +627,7 @@ a.mega-menu-link:active {
   -webkit-backdrop-filter: blur(10px);  
 }
 
-/* heading tags */
+/* alt heading tags */
 
 .page-header .alt-header-content h2 {
   color: #000;
@@ -657,7 +650,7 @@ a.mega-menu-link:active {
   margin-left: 30px;
 }
 
-/* content */
+/* alt content */
 
 .page-header .alt-header-content p {
   font-weight: 600;
@@ -793,12 +786,12 @@ a.mega-menu-link:active {
 .page-header .homepage-header .wp-block-column:nth-child(2) p {
   position: relative;
   z-index: 1;
-  width: 550px;
+  width: 675px;
   max-width: 100%;
   margin-top: 20px;
   padding: 90px 60px;
   box-sizing: content-box;
-  color: #FFF;
+  color: #1F1F1F;
   font-size: 45px;
   font-weight: 400;
   line-height: 50px;
@@ -808,7 +801,7 @@ a.mega-menu-link:active {
   position: relative;
   z-index: 1;
   font-weight: normal;
-  color: #4B4B4B;
+  color: #FFDB79;
 }
 
 .page-header .homepage-header .wp-block-column:nth-child(2) p::before {
@@ -819,7 +812,7 @@ a.mega-menu-link:active {
   left: 0;
   position: absolute;
   z-index: -1;
-  background: linear-gradient(to right, rgb(255, 137, 0, .19), rgb(187, 172, 130, .1));;
+  background: linear-gradient(to right, rgb(146, 146, 146, .5), rgb(255, 254, 250, .2));;
   opacity: 1;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);  
@@ -863,84 +856,66 @@ a.mega-menu-link:active {
 
 /*========= end Sub Homepage Header section =========*/
 
-/********** Services Section ***********/
-
-/* service banner */
+/********** Homepage Services Section ***********/
 
 .services {
   margin-top: 0 !important;
 }
 
-.services > .wp-block-group__inner-container > .wp-block-group:first-child {
-  background-image: linear-gradient(to right, rgb(129, 216, 255,1), rgb(255, 254, 255, 1));  
-  position: relative; 
+.services h2 {
+  position: relative;
+  background: linear-gradient(150deg, #E0E0E0 50%, #1F1F1F 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 200px 0;
+  font-size: 260px;  
+  line-height: normal;
+  color: #fff; 
+  margin-bottom: 0 !important;
 }
 
-.services > .wp-block-group__inner-container > .wp-block-group:first-child::before {
+.services h2::before {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 37px;
-  bottom: -10px;
-  background: white;
-}
-
-.services h2 strong{
-  font-size: 223px;
-  line-height: 44px; 
-  color: #4A4A4A; 
-  -webkit-text-fill-color: transparent; 
-  -webkit-text-stroke-width: 6px;
-  -webkit-text-stroke-color: #4A4A4A;
-}
-
-.services h2 {
-  padding-top: 125px;
-  font-size: 66px;
-  line-height: 66px;   
-  color: #4A4A4A; 
-  -webkit-text-fill-color: #4A4A4A; 
-  -webkit-text-stroke-width: 0;
-  -webkit-text-stroke-color: transparent;
-}
-
-.services h2 strong:nth-child(4) {
-  font-size: 66px;
-  line-height: 44px; 
-  color: #FFD154; 
-  -webkit-text-fill-color: #FFD154; 
-  -webkit-text-stroke-width: 0;
-  -webkit-text-stroke-color: transparent;
-  position: relative;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(150deg, #1F1F1F 50%, #FFFEFA 50% );
 }
 
 /* Services flex container and items */
 
-.services .services-container > .wp-block-group__inner-container {
+.services .services-container {
+  background: #FFFEFA;
+}
+
+.services .services-container .fixed-site-width > .wp-block-group__inner-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
-.services .services-container > .wp-block-group__inner-container .wp-block-group {
+.services .services-container .fixed-site-width  > .wp-block-group__inner-container .wp-block-group {
   width: 400px;
   height: 100%;
   padding: 0 0 50px;
 }
 
-.services .services-container > .wp-block-group__inner-container .wp-block-group > .wp-block-group__inner-container {
+.services .services-container .fixed-site-width  > .wp-block-group__inner-container .wp-block-group > .wp-block-group__inner-container {
   display: flex;
   flex-flow: column;
   height: 100%;
 }
 
-.services .services-container > .wp-block-group__inner-container .wp-block-group > .wp-block-group__inner-container h3 {
+.services .services-container .fixed-site-width  > .wp-block-group__inner-container .wp-block-group > .wp-block-group__inner-container h3 {
   margin-left: 0 !important;  
 }
-.services .services-container > .wp-block-group__inner-container .wp-block-group > .wp-block-group__inner-container p:first-of-type {
+.services .services-container .fixed-site-width  > .wp-block-group__inner-container .wp-block-group > .wp-block-group__inner-container p:first-of-type {
   margin-bottom: 50px !important;
 }
 
-.services .services-container > .wp-block-group__inner-container .wp-block-group > .wp-block-group__inner-container p:last-child {
+.services .services-container .fixed-site-width  > .wp-block-group__inner-container .wp-block-group > .wp-block-group__inner-container p:last-child {
   margin-left: 0 !important;
   margin-top: auto;
 }
@@ -964,44 +939,46 @@ a.mega-menu-link:active {
   transform: translateY(-50%);
 }
 
-.services .wp-block-group:first-child h3::after {
+.services .fixed-site-width .wp-block-group:first-child h3::after {
   background-image: linear-gradient(to right, #ff9493, #FFFEFA) !important; 
 }
 
-.services .wp-block-group:nth-child(2) h3::after {
+.services .fixed-site-width .wp-block-group:nth-child(2) h3::after {
   background-image: linear-gradient(to right, #644EFF, #FFFEFA); 
 }
 
-.services .wp-block-group:nth-child(3) h3::after {
+.services .fixed-site-width .wp-block-group:nth-child(3) h3::after {
   background-image: linear-gradient(to right, #FFCC43, #FFFEFA); 
 }
 
-.services .wp-block-group:nth-child(4) h3::after {
+.services .fixed-site-width .wp-block-group:nth-child(4) h3::after {
   background-image: linear-gradient(to right, #777777, #FFFEFA); 
 }
 
-.services .wp-block-group:nth-child(5) h3::after {
+.services .fixed-site-width .wp-block-group:nth-child(5) h3::after {
   background-image: linear-gradient(to right, #93FAFF, #FFFEFA); 
 }
 
-.services .wp-block-group:nth-child(6) h3::after {
+.services .fixed-site-width .wp-block-group:nth-child(6) h3::after {
   background-image: linear-gradient(to right, #FFB44E, #FFFEFA); 
 }
 
-.services .services-container > .wp-block-group__inner-container p {
+.services .services-container .fixed-site-width > .wp-block-group__inner-container p {
   font-size: 26px;
+  color: #4A4A4A;
   line-height: 37px;  
   margin-top: 0;
 }
 
-.services .services-container > .wp-block-group__inner-container a,
-.services .services-container > .wp-block-group__inner-container a:visited {
+.services .services-container .fixed-site-width > .wp-block-group__inner-container a,
+.services .services-container .fixed-site-width > .wp-block-group__inner-container a:visited {
   position: relative;
+  color: #4A4A4A;
   padding: 10px 0;
   font-weight: bold;
 }
 
-.services .services-container > .wp-block-group__inner-container a:after {
+.services .services-container .fixed-site-width > .wp-block-group__inner-container a:after {
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -1011,38 +988,37 @@ a.mega-menu-link:active {
   transition: all ease 0.3s;
 }
 
-
-.services .services-container > .wp-block-group__inner-container > .wp-block-group:first-child :after {
+.services .services-container .fixed-site-width > .wp-block-group__inner-container > .wp-block-group:first-child :after {
   background-color: #ff9493;
 }
 
-.services .services-container > .wp-block-group__inner-container > .wp-block-group:nth-child(2) :after {
+.services .services-container .fixed-site-width > .wp-block-group__inner-container > .wp-block-group:nth-child(2) :after {
   background-color: #644EFF;
 }
 
-.services .services-container > .wp-block-group__inner-container > .wp-block-group:nth-child(3) :after {
+.services .services-container .fixed-site-width > .wp-block-group__inner-container > .wp-block-group:nth-child(3) :after {
   background-color: #FFCC43;
 }
 
-.services .services-container > .wp-block-group__inner-container > .wp-block-group:nth-child(4) :after {
+.services .services-container .fixed-site-width > .wp-block-group__inner-container > .wp-block-group:nth-child(4) :after {
   background-color: #777777;
 }
 
-.services .services-container > .wp-block-group__inner-container > .wp-block-group:nth-child(5) :after {
+.services .services-container .fixed-site-width > .wp-block-group__inner-container > .wp-block-group:nth-child(5) :after {
   background-color: #93FAFF;
 }
 
-.services .services-container > .wp-block-group__inner-container > .wp-block-group:nth-child(6) :after {
+.services .services-container .fixed-site-width > .wp-block-group__inner-container > .wp-block-group:nth-child(6) :after {
   background-color: #FFB44E;
 }
 
-.services .services-container > .wp-block-group__inner-container a:hover:after,
-.services .services-container > .wp-block-group__inner-container a:active:after,
-.services .services-container > .wp-block-group__inner-container a:focus:after {
+.services .services-container .fixed-site-width > .wp-block-group__inner-container a:hover:after,
+.services .services-container .fixed-site-width > .wp-block-group__inner-container a:active:after,
+.services .services-container .fixed-site-width > .wp-block-group__inner-container a:focus:after {
   width: 100%;
 }
 
-/*========= end Services Section =========*/
+/*========= end Homepage Services Section =========*/
 
 /********** Homepage Contact Form ***********/
 
