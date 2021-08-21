@@ -1470,7 +1470,7 @@ a.mega-menu-link:active {
 
 /* Services grid container and items */
 
-/* .services-collapsed .services-container .wp-block-group > .wp-block-group__inner-container {
+.services-collapsed .services-container .wp-block-group > .wp-block-group__inner-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-gap: 10px;
@@ -1486,7 +1486,7 @@ a.mega-menu-link:active {
   flex-flow: row nowrap;
   align-items: center;
   height: 100%;
-} */
+}
 
 .services-collapsed h3 {
   width: 100%;
