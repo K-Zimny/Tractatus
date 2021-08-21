@@ -3,6 +3,10 @@
 sftp.json
 settings.json
 
+#Notes
+
+notes.txt
+
 # JPEG
 *.jpg
 *.jpeg
