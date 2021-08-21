@@ -232,6 +232,7 @@ li {
 
 .fixed-site-width,
 .fixed-1600-width,
+.fixed-900-width,
 .service-grid-width {
   max-width: 1920px !important;
   width: 92% !important;
@@ -243,10 +244,15 @@ li {
   max-width: 1600px !important;
 }
 
+.fixed-900-width {
+  max-width: 900px !important;
+}
+
 @media only screen and (max-width: 768px) {
 
   .fixed-site-width,
   .fixed-1600-width,
+  .fixed-900-width,
   .service-grid-width {
     width: 85% !important;
   }
@@ -1269,6 +1275,7 @@ a.mega-menu-link:active {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
+  line-height: 75px;
   margin-bottom: 0 !important;
 }
 
@@ -1335,11 +1342,21 @@ a.mega-menu-link:active {
 
 @media only screen and (max-width: 768px) {
 
+  .service h1 {
+    margin-left: auto !important;
+  }
+
   .service .wp-block-group:nth-of-type(2) {
     width: 100% !important;
     padding: 0 7.5%;
     margin-left: 0 !important;
     margin-right: 0 !important;
+  }
+
+  .service .service-container > .wp-block-group__inner-container > .wp-block-group:first-of-type {
+    width: 100%;
+    padding: 0 7.5% 50px;
+    margin-top: 0px !important;
   }
 
 }
@@ -1428,6 +1445,15 @@ a.mega-menu-link:active {
   margin-top: 0 !important;
 }
 
+@media only screen and (max-width: 768px) {
+
+  .services-collapsed {
+    background: #FFFEFA;
+    padding-top: 50px !important;
+  }
+
+}
+
 /* text styles  */
 
 .services-collapsed h2 {
@@ -1466,27 +1492,8 @@ a.mega-menu-link:active {
 .services-collapsed h2 {
   position: relative;
   flex-basis: 10%;
+  background: #1F1F1F; 
 } 
-
-/* Services grid container and items */
-
-/* .services-collapsed .services-container .wp-block-group > .wp-block-group__inner-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  grid-gap: 10px;
-}
-
-.services-collapsed .services-container .wp-block-group  > .wp-block-group__inner-container .wp-block-group {
-  height: 100%;
-  width: 70%;
-}
-
-.services-collapsed .services-container .wp-block-group  > .wp-block-group__inner-container .wp-block-group > .wp-block-group__inner-container {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  height: 100%;
-} */
 
 .services-collapsed h3 {
   width: 100%;
@@ -1498,6 +1505,7 @@ a.mega-menu-link:active {
 .services-collapsed a,
 .services-collapsed a:visited {
   display: block;
+  margin-bottom: 3px;
   transition: all ease 0.3s;
 }
 
