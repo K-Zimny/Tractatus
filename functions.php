@@ -222,3 +222,10 @@ function wpb_add_google_fonts() {
 }
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
 
+/*enqueue JS*/
+
+function add_js_script() {
+	wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/script.js', array ( 'jquery' ), 1.1, true);
+}
+add_action( 'wp_enqueue_scripts', 'add_js_script' );
+

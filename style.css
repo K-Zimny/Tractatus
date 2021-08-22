@@ -144,6 +144,10 @@ body {
     color: #4B4B4B;  
 }
 
+.hide-element {
+  display: none !important;
+}
+
 /* ============================================================================================================================================================== */
 /* Typography */
 /* ============================================================================================================================================================== */
@@ -248,7 +252,7 @@ li {
   max-width: 900px !important;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 
   .fixed-site-width,
   .fixed-1600-width,
@@ -391,6 +395,14 @@ li {
 }
 
 /*========= end widths =========*/
+
+/********** max-widths ***********/
+
+.max-width-95pct {
+  max-width: 95% !important;
+}
+
+/********** end max-widths ***********/
 
 /* ============================================================================================================================================================== */
 /* Margins */
@@ -893,6 +905,7 @@ a.mega-menu-link:active {
 }
 
 .wpforms-submit-container button {
+  font-family: 'Source Code Pro', monospace !important;
   padding: 25px 100px !important;
   background: transparent !important;
   border: 1px solid #707070 !important;
@@ -930,6 +943,32 @@ a.mega-menu-link:active {
   background-color: #fff !important;
 }
 
+@media only screen and (max-width: 767px) {
+
+  .contact h2 {
+    font-size: 24px;
+    line-height: 31px;  
+  }
+
+  .contact p {
+    font-size: 16px;
+    line-height: 20px;  
+  }
+
+  .wpforms-field-label,
+  .wpforms-container input,
+  .wpforms-container textarea {
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
+
+  .wpforms-submit-container button {
+    font-size: 20px  !important;
+    line-height: 31px  !important;    
+  }
+
+
+}
 
 /*========= end Contact Form =========*/
 
@@ -1084,6 +1123,8 @@ a.mega-menu-link:active {
 .services .services-container .fixed-site-width > .wp-block-group__inner-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-column-gap: 50px;
+  grid-row-gap: 150px;
 }
 
 .services .services-container .fixed-site-width  > .wp-block-group__inner-container .wp-block-group {
@@ -1107,14 +1148,15 @@ a.mega-menu-link:active {
 
 .services .services-container .fixed-site-width  > .wp-block-group__inner-container .wp-block-group > .wp-block-group__inner-container p:last-child {
   margin-left: 0 !important;
-  margin-top: auto;
 }
 
 .services h3 {
   position: relative;
   z-index: 1;
-  font-size: 75px;
-  line-height: 90px;  
+  color: #4a4a4a;
+  font-size: 60px;
+  line-height: 80px;  
+  font-weight: normal;
   margin-bottom: 0;
 }
 
@@ -1123,7 +1165,7 @@ a.mega-menu-link:active {
   position: absolute;
   z-index: -1;
   width: 280px;
-  height: 125px;
+  height: 100px;
   left: 125px;
   top: 50%;
   transform: translateY(-50%);
@@ -1154,9 +1196,9 @@ a.mega-menu-link:active {
 }
 
 .services .services-container .fixed-site-width > .wp-block-group__inner-container p {
-  font-size: 26px;
+  font-size: 24px;
   color: #4A4A4A;
-  line-height: 37px;  
+  line-height: 35px;  
   margin-top: 0;
 }
 
@@ -1214,6 +1256,11 @@ a.mega-menu-link:active {
 /* Service Pages */
 /* ============================================================================================================================================================== */
 
+#servicePage {
+  opacity: 0;
+  display: none;
+}
+
 /***** Service item grid *****/
 
 .service {
@@ -1221,25 +1268,15 @@ a.mega-menu-link:active {
   background: linear-gradient(90deg, #1F1F1F 50%, #FFFEFA 50%);
 }
 
-.service::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 49.9%;
-  width: 50%;
-  height: 3px;
-  background: #1F1F1F;
-}
-
 .service-container > .wp-block-group__inner-container {
   display: grid;
-  grid-template-columns: repeat(4, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
   grid-template-rows: repeat(8, 125px);
 }
 
 /***** Service item grid 768px*****/
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 
   .service {
     background: #1F1F1F;
@@ -1247,6 +1284,10 @@ a.mega-menu-link:active {
 
   .service::after {
     content: none;
+  }
+
+  .service-container {
+    padding-bottom: 0 !important;
   }
 
   .service-container > .wp-block-group__inner-container {
@@ -1302,12 +1343,26 @@ a.mega-menu-link:active {
 /* img styles */
 
 .service figure:first-of-type {
+  position: relative;
+  width: 50vw;
+  max-width: none !important;
   margin: 0 !important;
 }
 
+.service figure:first-of-type::after {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #4B4B4B; 
+}
+
 .service figure:first-of-type img {
+  width:100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 /* ul styles */
@@ -1332,6 +1387,27 @@ a.mega-menu-link:active {
 
 @media only screen and (max-width: 1200px) {
 
+  .service h1 {
+    font-size: 63px;
+  }
+
+  .service h2 {
+    font-size: 36px;
+    line-height: 60px;
+  }
+
+  .service .service-container > .wp-block-group__inner-container > .wp-block-group:first-of-type {
+    margin-top: -60px !important;
+  }
+
+  .service p {
+    font-size: 20px;
+  }
+
+  .service li {
+    font-size: 20px;
+  }
+
   .service .wp-block-group:nth-of-type(2) {
     background: #FFFEFA;
   }
@@ -1340,23 +1416,46 @@ a.mega-menu-link:active {
 
 /***** Service styles 768px*****/
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 
   .service h1 {
     margin-left: auto !important;
+    font-size: clamp(50px, 15vw, 63px);
   }
 
-  .service .wp-block-group:nth-of-type(2) {
-    width: 100% !important;
-    padding: 0 7.5%;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+  .service h2 {
+    font-size: 26px;
+    line-height: 50px;
   }
 
+  /* Description text */
   .service .service-container > .wp-block-group__inner-container > .wp-block-group:first-of-type {
     width: 100%;
     padding: 0 7.5% 50px;
-    margin-top: 0px !important;
+    margin-top: 30px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* bullet point list */
+  .service .wp-block-group:nth-of-type(2) {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative;
+    padding: 0 7.5%;
+    margin: 0 !important;
+  }
+
+  .service figure:first-of-type {
+    width: 100%;
+  }
+
+  .service p {
+    font-size: 16px;
+  }
+
+  .service li {
+    font-size: 16px;
   }
 
 }
@@ -1398,9 +1497,23 @@ a.mega-menu-link:active {
   grid-row: 6/end;
 }
 
+/***** Grid item arrangement 1200px*****/
+
+@media only screen and (max-width: 1200px) {
+
+  /* Service Include Img/video animation */
+
+  .service figure:nth-of-type(2) {
+    grid-column: 1/5;
+    grid-row: 9/end;
+    position: relative;
+  }
+
+}
+
 /***** Grid item arrangement 768px*****/
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 
   /* h1 */
 
@@ -1442,16 +1555,7 @@ a.mega-menu-link:active {
 /********** Individual Service, Services Section ***********/
 
 .services-collapsed {
-  margin-top: 0 !important;
-}
-
-@media only screen and (max-width: 768px) {
-
-  .services-collapsed {
-    background: #FFFEFA;
-    padding-top: 50px !important;
-  }
-
+  margin: 0 !important;
 }
 
 /* text styles  */
@@ -1464,15 +1568,11 @@ a.mega-menu-link:active {
   writing-mode: vertical-rl;
 }
 
-.services-collapsed h3 {
-  font-size: 30px;
-  color: #4A4A4A;
-  line-height: 40px;  
-}
-
 .services-collapsed a,
 .services-collapsed a:visited {
+  font-size: 30px;
   color: #1F1F1F;
+  line-height: 40px;  
   font-weight: 500;
   padding: 20px 70px;
 }
@@ -1486,6 +1586,7 @@ a.mega-menu-link:active {
 
 .services-collapsed .services-container {
   background: #FFFEFA;
+  margin: 0 !important;
   flex-basis: 90%;
 }
 
@@ -1493,6 +1594,7 @@ a.mega-menu-link:active {
   position: relative;
   flex-basis: 10%;
   background: #1F1F1F; 
+  margin-bottom: 0 !important;
 } 
 
 .services-collapsed h3 {
@@ -1505,15 +1607,51 @@ a.mega-menu-link:active {
 .services-collapsed a,
 .services-collapsed a:visited {
   display: block;
-  margin-bottom: 3px;
-  transition: all ease 0.3s;
+  transition: all ease .4s;
+}
+
+.services-collapsed .services-container .wp-block-group > .wp-block-group__inner-container > .wp-block-group:last-child a {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .services-collapsed a,
+  .services-collapsed a:visited {
+    font-size: 25px;
+  } 
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  .services-collapsed {
+    background: #FFFEFA;
+    padding-top: 50px !important;
+  }
+
+  /* text styles  */
+
+  .services-collapsed h2 {
+    font-size: 40px;  
+    padding: 50px 0;
+
+  }
+
+  .services-collapsed a,
+  .services-collapsed a:visited {
+    font-size: 20px;
+    line-height: 30px; 
+    padding: 20px 20px;
+  }
+
 }
 
 /***** Page Colors *****/
 
-.services-collapsed.services-container .wp-block-group > .wp-block-group__inner-container > .wp-block-group:first-child a:hover,
-.services-collapsed.services-container .wp-block-group > .wp-block-group__inner-container > .wp-block-group:first-child a:active,
-.services-collapsed.services-container .wp-block-group > .wp-block-group__inner-container > .wp-block-group:first-child a:focus {
+.services-collapsed .services-container .wp-block-group > .wp-block-group__inner-container > .wp-block-group:first-child a:hover,
+.services-collapsed .services-container .wp-block-group > .wp-block-group__inner-container > .wp-block-group:first-child a:active,
+.services-collapsed .services-container .wp-block-group > .wp-block-group__inner-container > .wp-block-group:first-child a:focus {
   background-color: #ff9493;
 }
 
@@ -1532,7 +1670,7 @@ a.mega-menu-link:active {
 .services-collapsed .services-container .wp-block-group > .wp-block-group__inner-container > .wp-block-group:nth-child(4) a:hover,
 .services-collapsed .services-container .wp-block-group > .wp-block-group__inner-container > .wp-block-group:nth-child(4) a:active,
 .services-collapsed .services-container .wp-block-group > .wp-block-group__inner-container > .wp-block-group:nth-child(4) a:focus {
-  background-color: #777777;
+  background-color: #A1FFCA;
 }
 
 .services-collapsed .services-container .wp-block-group > .wp-block-group__inner-container > .wp-block-group:nth-child(5) a:hover,
@@ -1556,6 +1694,61 @@ a.mega-menu-link:active {
 
 #ux-design-services .is-active-page {
   background: #ff9493;   
+}
+
+/* ui-design  */
+
+#ui-design-grid h1,
+#ui-design-grid li::marker {
+  color: #644EFF;  
+}
+
+#ui-design-services .is-active-page {
+  background: #644EFF;   
+}
+
+/* web dev */
+
+#dev-grid h1,
+#dev-grid li::marker {
+  color: #FFCC43;  
+}
+
+#dev-services .is-active-page {
+  background: #FFCC43;   
+}
+
+/* web dev */
+
+#g_m-design-grid h1,
+#g_m-design-grid li::marker {
+  color: #A1FFCA;  
+}
+
+#g_m-design-services .is-active-page {
+  background: #A1FFCA;   
+}
+
+/* responsive design*/
+
+#responsive-design-grid h1,
+#responsive-design-grid li::marker {
+  color: #93FAFF;  
+}
+
+#responsive-design-services .is-active-page {
+  background: #93FAFF;   
+}
+
+/* SEO and Analytics */
+
+#s_a-grid h1,
+#s_a-grid li::marker {
+  color: #FFB44E;  
+}
+
+#s_a-services .is-active-page {
+  background: #FFB44E;   
 }
 
 /*========= end Individual Service, Services Section =========*/
