@@ -964,7 +964,8 @@ a.mega-menu-link:active {
 
   .wpforms-submit-container button {
     font-size: 20px  !important;
-    line-height: 31px  !important;    
+    line-height: 31px  !important; 
+    padding: 10px 50px !important;   
   }
 
 
@@ -1081,6 +1082,27 @@ a.mega-menu-link:active {
 .homepage-subheader p strong:nth-child(4) {
   color: #818BFF;  
 }
+
+/********** Homepage Sub Header Media Query***********/
+
+/***** Homepage Sub Header 1200px*****/
+
+@media only screen and (max-width: 1200px) {
+
+  .homepage-subheader h2 {
+    font-size: 63px;
+    line-height: 80px;
+  }
+
+  .homepage-subheader p {
+    font-size: 30px;
+    line-height: 38px;
+  } 
+
+
+}
+
+/********** End Homepage Sub Header Media Query***********/
 
 /*========= end Sub Homepage Header section =========*/
 
@@ -1250,6 +1272,26 @@ a.mega-menu-link:active {
   width: 100%;
 }
 
+/********** Homepage Services Section Media Query***********/
+
+@media only screen and (max-width: 1200px) {
+
+  .services h2 {
+    font-size: 150px;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  .services h2 {
+    font-size: 75px;
+  }
+
+}
+
+/********** End Homepage Services Section Media Query***********/
+
 /*========= end Homepage Services Section =========*/
 
 /* ============================================================================================================================================================== */
@@ -1302,12 +1344,14 @@ a.mega-menu-link:active {
 /* text styles */
 
 .service h1 {
-  font-size: 90px;
+  font-size: clamp(55px, 4.5vw, 80px);
   color: #fff;  
   font-weight: normal;
   line-height: normal;
   margin-top: 50px !important;
   margin-left: 0 !important;
+  padding-right: 25px;
+  z-index: 1;
 }
 
 .service h2 {
@@ -1388,7 +1432,7 @@ a.mega-menu-link:active {
 @media only screen and (max-width: 1200px) {
 
   .service h1 {
-    font-size: 63px;
+    font-size: 52px;
   }
 
   .service h2 {
@@ -1420,7 +1464,9 @@ a.mega-menu-link:active {
 
   .service h1 {
     margin-left: auto !important;
-    font-size: clamp(50px, 15vw, 63px);
+    font-size: clamp(40px, 12vw, 63px);
+    max-width: 95% !important;
+    padding: 0 7.5%;
   }
 
   .service h2 {
@@ -1495,6 +1541,21 @@ a.mega-menu-link:active {
 .service figure:nth-of-type(2) {
   grid-column: 4/5;
   grid-row: 6/end;
+}
+
+/***** Grid item arrangement title two lines*****/
+
+/* h1 two-lines*/
+
+.service h1 {
+  grid-column: 1/3;
+  grid-row:1/3;
+}
+
+/* p description 2 lines*/
+
+.service .service-container.title-two-l > .wp-block-group__inner-container > .wp-block-group:first-of-type {
+  margin-top: 30px !important;
 }
 
 /***** Grid item arrangement 1200px*****/

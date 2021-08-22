@@ -23,6 +23,12 @@ h1::before {
     padding: 15px;
 }
 
+/* figure styles */
+
+.wp-block-image {
+    background: rgb(0,0,0, 0.1);
+}
+
 /* video styles */
 
 .wp-block-video video {

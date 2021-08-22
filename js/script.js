@@ -14,9 +14,9 @@
 
 // jQuery fallback code
 
-var delayInMilliseconds = 1000; //1 second
+// var delayInMilliseconds = 1000; //1 second
 
-setTimeout(function() {
-  document.getElementById("servicePage").style.display = "block";
-  document.getElementById("servicePage").style.opacity = "1";
-}, delayInMilliseconds);
+// setTimeout(function() {
+//   document.getElementById("servicePage").style.display = "block";
+//   document.getElementById("servicePage").style.opacity = "1";
+// }, delayInMilliseconds);
