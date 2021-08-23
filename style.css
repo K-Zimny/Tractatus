@@ -176,6 +176,7 @@ h1 {
   line-height: 37px;
   letter-spacing: 0px;  
   margin-bottom: 0px !important;
+  padding-right: 20px;
 }
 
 h1 strong:last-of-type {
@@ -1062,7 +1063,7 @@ a.mega-menu-link:active {
   color: #1F1F1F;
   font-size: 45px;
   font-weight: 400;
-  line-height: 50px;
+  min-height: 200px;
 }
 
 .page-header .homepage-header .wp-block-column:nth-child(2) p strong {
@@ -1131,6 +1132,10 @@ a.mega-menu-link:active {
 
 @media only screen and (max-width: 783px) {
 
+  .page-header > .wp-block-group__inner-container > .wp-block-columns > .wp-block-column:first-child .wp-block-group {
+    margin-bottom: 30px;
+  }
+
   .page-header {
     padding-bottom: 0;
   }
@@ -1154,6 +1159,7 @@ a.mega-menu-link:active {
     display: flex;
     flex-direction: column;
     padding: 0 7.5%;
+    margin-bottom: 0 !important;
   }
 
   /* .page-header > .wp-block-group__inner-container > .wp-block-columns > .wp-block-column:first-child .wp-block-group {
@@ -1167,6 +1173,7 @@ a.mega-menu-link:active {
   .page-header .homepage-header .wp-block-column:nth-child(2) p {
     padding-top: 0;
     font-size: 16px;
+    line-height: 30px;
   }
 
   .page-header .homepage-header h2:first-child {
@@ -1174,7 +1181,7 @@ a.mega-menu-link:active {
     margin-top: 30 !important;
     z-index: 1;
     position: relative;
-    margin-bottom: -30px !important;
+    margin-bottom: 0px !important;
     padding: 0 7.5%;
 }
   
@@ -1200,19 +1207,20 @@ a.mega-menu-link:active {
 
   .page-header .homepage-header .wp-block-column h2 {
     font-size: 60px;
-    margin-left: 0;
+    margin-top: 0;
+    margin-left: 30px;
   }
 
 
 
   .page-header .homepage-header .wp-block-column:first-child {
-    flex-basis: 10% !important;
-    width: 10%;
+    flex-basis: 20% !important;
+    width: 20%;
   }
 
   .page-header .homepage-header .wp-block-column:last-child {
-    flex-basis: 90% !important;
-    width: 90%;
+    flex-basis: 80% !important;
+    width: 80%;
     margin-left: 0 !important;
   }
 
@@ -1220,8 +1228,23 @@ a.mega-menu-link:active {
     content: none;
   }
 
+  .page-header > .wp-block-group__inner-container > .wp-block-columns > .wp-block-column:first-child .wp-block-group p:first-child {
+    font-size: 16px;
+  }
+
+  .page-header > .wp-block-group__inner-container > .wp-block-columns > .wp-block-column:first-child .wp-block-group p:nth-child(2) a, .page-header > .wp-block-group__inner-container > .wp-block-columns > .wp-block-column:first-child .wp-block-group p:nth-child(2) a:visited {
+    font-size: 16px;
+  }
 
 
+
+}
+
+@media only screen and (max-width: 349px) {
+
+    .page-header .homepage-header h2:first-child {
+      font-size: 60px;
+  }
 }
 
 /*========= end Homepage Header section Media Query =========*/
