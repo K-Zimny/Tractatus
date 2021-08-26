@@ -10,28 +10,39 @@
     // Animation complete.
   });
 
-      // jQuery in viewport
+  document.getElementById("homeVideo").scrollIntoView();
 
-    $.fn.isOnScreen = function(){
+    // After home video 
+    // window.scrollBy(0, 100);
+    
+  // document.getElementById('homeVideo').children[0].addEventListener('ended',myHandler,false);
+  // function myHandler(e) {
+  //     // What you want to do after the event
+  //     console.log("Video over");
 
-      var win = $(window);
+  //     setTimeout(function() {
+  //       console.log("delay over");
+  //       jQuery("#homeHeader").animate({
+  //         opacity: 0,
+  //         height: "toggle"
+  //       }, 3000, function() {
+  //         // Animation complete.
+  //       });;
+  //     }, 100);
+  //   }
 
-      var viewport = {
-          top : win.scrollTop(),
-          left : win.scrollLeft()
-      };
-      viewport.right = viewport.left + win.width();
-      viewport.bottom = viewport.top + win.height();
+      // jQuery("#perfect").animate({
+      //   opacity: 1,
+      //   height: "toggle"
+      // }, 2000, function() {
+      //   // Animation complete.
+      // });
 
-      var bounds = this.offset();
-      bounds.right = bounds.left + this.outerWidth();
-      bounds.bottom = bounds.top + this.outerHeight();
 
-      return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-
-  };
 
 });
+
+
 
 // jQuery fallback code
 
