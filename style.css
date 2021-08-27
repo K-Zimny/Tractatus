@@ -957,20 +957,120 @@ li {
 
 a.mega-menu-link,
 a.mega-menu-link:visited {
-  margin: 0 20px !important;
+  margin: 15px 20px !important;
   font-family: 'Source Code Pro', monospace !important;
   font-size: 24px !important;
   font-weight: normal !important;
   line-height: 37px !important;
   letter-spacing: 0px !important;
   color: #fff !important;
+  transition: all ease .3s !important;
 }
 
 a.mega-menu-link:hover,
 a.mega-menu-link:focus,
 a.mega-menu-link:active {
-  border-bottom: 1px solid #fff !important;
+  transform: scale(1.05) !important;
 }
+
+/********** mega menu, sub menu ***********/
+
+#mega-menu-item-234.mega-menu-item.mega-toggle-on > a {
+  color: #FFDB79 !important;
+}
+
+#mega-menu-item-234.mega-menu-item ul {
+  position: absolute !important;
+  left: 0 !important;
+  width: 0 !important;
+  transition: none !important;
+}
+
+#mega-menu-item-234.mega-menu-item.mega-toggle-on ul {
+  background: #393939 !important;
+  position: fixed !important;
+  left: 0 !important;
+  width: 100vw !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  transition: all ease 1s !important;
+  padding: 20px 0 40px !important;
+}
+
+#mega-menu-item-234.mega-menu-item li {
+  position: relative  !important;
+  width: 40%  !important;
+  
+}
+
+#mega-menu-item-234.mega-menu-item li a,
+#mega-menu-item-234.mega-menu-item li a:visited {
+  position: relative;
+  font-size: 40px !important;
+  line-height: 70px !important;
+  padding: 20px 0 !important;
+  margin: 0 !important;
+  transition: all ease .3s !important;
+}
+
+#mega-menu-item-234.mega-menu-item li a:hover,
+#mega-menu-item-234.mega-menu-item li a:active,
+#mega-menu-item-234.mega-menu-item li a:focus  {
+  transform: scale(1.05) !important;
+  border: none !important;
+}
+
+#mega-menu-item-234.mega-menu-item li a::before {
+  content: "•" !important;
+  color: #fff !important;
+  position: absolute !important;
+  transform: translateY(15%) !important;
+  inset: 0 !important;
+  left: -30px !important;
+}
+
+#mega-menu-item-234.mega-menu-item li:first-of-type a::before {
+  color: #ff9493 !important;
+}
+
+#mega-menu-item-234.mega-menu-item li:nth-of-type(2) a::before {
+  color: #9D8FFD !important;
+}
+
+#mega-menu-item-234.mega-menu-item li:nth-of-type(3) a::before {
+  color: #FFCC43 !important;
+}
+
+#mega-menu-item-234.mega-menu-item li:nth-of-type(4) a::before {
+  color: #A4FFCB !important;
+}
+
+#mega-menu-item-234.mega-menu-item li:nth-of-type(5) a::before {
+  color: #93FAFF !important;
+}
+
+#mega-menu-item-234.mega-menu-item li:nth-of-type(6) a::before {
+  color: #FFB44E !important;
+}
+
+/********** menu sub menu Media Query ***********/
+
+@media only screen and (max-width: 1200px) {
+
+  #mega-menu-item-234.mega-menu-item li a {
+    position: relative;
+    font-size: 30px !important;
+    line-height: 50px !important;
+  }
+
+}
+
+/*========= end sub menu Media Query =========*/
+
+/*========= end menu sub menu =========*/
+
 
 /*========= end Logo and Nav =========*/
 
@@ -997,12 +1097,17 @@ a.mega-menu-link:active {
   margin-bottom: 0 !important;
 }
 
+.page-header figure {
+  /* margin-top: -68px !important; */
+}
+
 .page-header figure video {
   display: flex;
   justify-content: center;
   height: calc(90vw * (9/16));
-  /* margin-top: -100px; */
   object-fit: cover;
+  position: fixed;
+  z-index: -999;
 }
 
 /* .page-header figure {
@@ -1172,6 +1277,11 @@ a.mega-menu-link:active {
   line-height: 40px;  
 }
 
+#what-we-bring figure {
+  background: linear-gradient(#e66465, #e591ce);
+  clip-path: polygon(-6% 112%, 212% 44%, 34% -2%);
+}
+
 #here-for-you figure {
   clip-path: polygon(17% -2%, 4% 110%, 156% 44%);  
 }
@@ -1243,6 +1353,7 @@ a.mega-menu-link:active {
 
 .contact {
   background: #FFFEFA;
+  margin-top: 0 !important;
 }
 
 .contact h2 {
@@ -1440,16 +1551,16 @@ a.mega-menu-link:active {
 
 .home-header-flex-container > .wp-block-group__inner-container {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: space-between;
 }
 
 .home-header-flex-container > .wp-block-group__inner-container .wp-block-group:first-of-type {
-  width: 75%;
+  width: 100%;
 }
 
 .home-header-flex-container > .wp-block-group__inner-container .wp-block-group:last-of-type {
-  width: 20%;
+  width: 100%;
 }
 
 
@@ -1675,6 +1786,12 @@ a.mega-menu-link:active {
 
 /********** Homepage Sub Header section ***********/
 
+.homepage-subheader {
+  position: relative;
+  z-index: 1;
+  background: #1F1F1F; 
+}
+
 .homepage-subheader h2 {
   display: inline-block;
   position: relative;
@@ -1694,7 +1811,7 @@ a.mega-menu-link:active {
 
 .homepage-subheader p {
   margin-top: 50px !important;
-  margin-bottom: 50px !important;
+  margin-bottom: 0px !important;
   padding: 0 10%;
   font-size: 45px;
   font-weight: bold;
@@ -1768,7 +1885,7 @@ a.mega-menu-link:active {
   position: relative;
   background: #1F1F1F 50%;
   padding: 150px 0 175px;
-  font-size: 260px;  
+  font-size: 245px;  
   line-height: normal;
   color: #fff; 
   margin-bottom: 0 !important;
@@ -1969,6 +2086,219 @@ a.mega-menu-link:active {
 
 /********** End Homepage Services Section Media Query***********/
 /*========= end Homepage Services Section =========*/
+
+/**********  Homepage Sub-Services Section ***********/
+
+.sub-services {
+  position: relative;
+  background: #1F1F1F;
+  margin-top: 0 !important; 
+  margin-bottom: 0 !important;
+}
+
+.sub-services .two-col_w-img-right,
+.sub-services .two-col_w-img-left {
+  position: relative; 
+  z-index: 999;
+}
+
+
+.sub-services .shards ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding-left: 0;
+}
+
+.sub-services .shards li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(#e67388, #3a95fd);
+  animation: animate-shards 30s linear infinite;
+  clip-path: polygon(-6% 112%, 212% 44%, 34% -2%);
+  bottom: -150px;
+}
+
+.sub-services .shards li:nth-child(1){
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+
+.sub-services .shards li:nth-child(2){
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 24s;
+}
+
+.sub-services .shards li:nth-child(3){
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.sub-services .shards li:nth-child(4){
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 36s;
+}
+
+.sub-services .shards li:nth-child(5){
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.sub-services .shards li:nth-child(6){
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.sub-services .shards li:nth-child(7){
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.sub-services .shards li:nth-child(8){
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 22s;
+}
+
+.sub-services .shards li:nth-child(9){
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 25s;
+}
+
+.sub-services .shards li:nth-child(10){
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+
+.sub-services .shards li:nth-child(11){
+  left: 53%;
+  width: 10px;
+  height: 87px;
+  animation-delay: 0.3s;
+}
+
+
+.sub-services .shards li:nth-child(12){
+  left: 17%;
+  width: 5px;
+  height: 25px;
+  animation-delay: 5s;
+  animation-duration: 12s;
+}
+
+.sub-services .shards li:nth-child(13){
+  left: 78%;
+  width: 25px;
+  height: 90px;
+  animation-delay: 2s;
+}
+
+.sub-services .shards li:nth-child(14){
+  left: 3%;
+  width: 69px;
+  height: 69px;
+  animation-delay: 1s;
+  animation-duration: 17s;
+}
+
+.sub-services .shards li:nth-child(15){
+  left: 34%;
+  width: 120px;
+  height: 34px;
+  animation-delay: 3s;
+}
+
+.sub-services .shards li:nth-child(16){
+  left: 59%;
+  width: 10px;
+  height: 30px;
+  animation-delay: 19s;
+}
+
+.sub-services .shards li:nth-child(17){
+  left: 0%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+}
+
+.sub-services .shards li:nth-child(18){
+  left: 100%;
+  width: 78px;
+  height: 25px;
+  animation-delay: 1s;
+  animation-duration: 19s;
+}
+
+.sub-services .shards li:nth-child(19){
+  left: 13%;
+  width: 150px;
+  height: 59px;
+  animation-delay: 2s;
+  animation-duration: 17s;
+}
+
+.sub-services .shards li:nth-child(20){
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  animation-delay: 0s;
+  animation-duration: 23s;
+}
+
+@keyframes animate-shards {
+
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 0;
+      border-radius: 0;
+      background: linear-gradient(#e66464, #9198e5);
+      clip-path: polygon(-6% 112%, 212% 44%, 34% -2%);
+  }
+
+  100%{
+      transform: translateY(-2000px) rotate(720deg);
+      opacity: 1;
+      border-radius: 50%;
+      clip-path: polygon(17% -2%, 4% 110%, 156% 44%);
+  }
+
+}
+
+
+
+/*========= end Homepage Sub-Services Section =========*/
 
 
 /* ============================================================================================================================================================== */
@@ -2502,13 +2832,20 @@ a.mega-menu-link:active {
 /* About Page */
 /* ============================================================================================================================================================== */
 
+/* about page header */
+
+.about-page-header p {
+  padding: 30px;
+  border: 3px solid #FFFEFA;
+}
+
 .about-page-text-container {
   margin-top: 0 !important;
 }
 
 .about-page-text-container h2 {
   color: #ffffff; 
-  padding: 125px 0 125px;
+  padding: 0 0 125px;
   font-size: 260px;  
   line-height: normal;
   margin-bottom: 0 !important;
@@ -2547,7 +2884,7 @@ a.mega-menu-link:active {
 @media only screen and (max-width: 1200px) {
 
   .about-page-text-container h2 {
-    padding: 100px 0;
+    padding: 0 0 100px;
     font-size: 150px;  
   }
 
@@ -2560,6 +2897,11 @@ a.mega-menu-link:active {
 }
 
 @media only screen and (max-width: 781px) {
+
+  .about-page-text-container h2 {
+    padding: 0 0 50px;
+    font-size: 100px;  
+  }
 
   .about-page-text-container .two-col_w-img-right figcaption,
   .about-page-text-container .two-col_w-img-right figcaption {
