@@ -930,10 +930,15 @@ li {
   align-items: center;
 }
 
+.menu-button-container {
+  display: none !important;
+}
+
 /* Logo */
 
 .site-branding {
   margin-bottom: 0 !important;
+  z-index: 999;
 }
 
 .site-logo {
@@ -947,8 +952,15 @@ li {
   margin-left: auto !important;
 }
 
+
 #mega-menu-wrap-primary {
   background: transparent !important;
+  height: 100%;
+}
+
+.mega-menu-toggle {
+  background: transparent !important;
+  height: 100% !important;
 }
 
 .mega-menu-link {
@@ -972,6 +984,58 @@ a.mega-menu-link:focus,
 a.mega-menu-link:active {
   transform: scale(1.05) !important;
 }
+
+/********** Logo and Nav Media Query ***********/
+
+@media only screen and (max-width: 781px) {
+
+  /* mega menu */
+
+  #mega-menu-primary {
+    padding: 50px 0 !important;
+  }
+
+  .primary-navigation {
+    height: 67px;
+    width: 100%;
+    left: 0;
+    position: absolute;
+  }
+
+  #mega-menu-wrap-primary {
+    width: 100%;
+  }
+
+  #mega-menu-wrap-primary .mega-menu-toggle + #mega-menu-primary {
+    transition: all ease .5s !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    display: block !important;
+    left: -100% !important;
+  }
+
+  #mega-menu-wrap-primary .mega-menu-toggle.mega-menu-open + #mega-menu-primary {
+    opacity: 1 !important; 
+    visibility: visible !important;
+    left: 0% !important;
+  }
+
+  #mega-menu-wrap-primary .mega-menu-toggle .mega-toggle-blocks-right .mega-toggle-block {
+    margin-right: 20px !important;
+  }
+
+  a.mega-menu-link,
+  a.mega-menu-link:visited {
+    padding: 20px 0 !important;
+    height: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+}
+
+/*========= end Logo and Nav Media Query =========*/
+/*========= end Logo and Nav =========*/
 
 /********** mega menu, sub menu ***********/
 
@@ -1008,7 +1072,7 @@ a.mega-menu-link:active {
 #mega-menu-item-234.mega-menu-item li a,
 #mega-menu-item-234.mega-menu-item li a:visited {
   position: relative;
-  font-size: 40px !important;
+  font-size: 35px !important;
   line-height: 70px !important;
   padding: 20px 0 !important;
   margin: 0 !important;
@@ -1055,13 +1119,42 @@ a.mega-menu-link:active {
   color: #FFB44E !important;
 }
 
-/********** menu sub menu Media Query ***********/
+/********** menu, sub menu Media Query ***********/
 
 @media only screen and (max-width: 1200px) {
 
   #mega-menu-item-234.mega-menu-item li a {
     position: relative;
-    font-size: 30px !important;
+    font-size: 24px !important;
+    line-height: 50px !important;
+  }
+
+}
+
+@media only screen and (max-width: 781px) {
+
+   #mega-menu-item-234.mega-menu-item.mega-toggle-on ul {
+    position: relative !important;
+  }
+
+  /* Services menu */
+  #mega-menu-item-234 .mega-sub-menu{
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+
+  #mega-menu-item-234.mega-toggle-on .mega-sub-menu {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  #mega-menu-item-234.mega-menu-item li {
+    width: 70% !important;
+  }
+
+  #mega-menu-item-234.mega-menu-item li a {
+    position: relative;
+    font-size: 24px !important;
     line-height: 50px !important;
   }
 
@@ -1503,6 +1596,25 @@ a.mega-menu-link:active {
   margin: 0 !important;
 }
 
+/********** Diagonal bg Media Query***********/
+
+@media only screen and (max-width: 1200px) {
+
+  .diag-bg-b-arrow-d {
+    padding: 50px 0;
+  }
+
+}
+
+@media only screen and (max-width: 781px) {
+
+  .diag-bg-b-arrow-d {
+    padding: 30px 0;
+  }
+
+}
+
+/********** EndDiagonal bg Media Query***********/
 /*========= end Diagonal bg  =========*/
 
 /********** Flex classes ***********/
