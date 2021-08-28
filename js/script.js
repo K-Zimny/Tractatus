@@ -15,7 +15,6 @@ console.log( "ready!" );
       opacity: 1,
       height: "toggle"
     }, 2000);
-
     
 // ============================================================================================================================================================== */
 // home video scroll down
@@ -31,7 +30,7 @@ console.log( "ready!" );
       jQuery(window).scroll(function() {
         if (jQuery(document).scrollTop() > 1) {
           jQuery(video).animate({
-            'margin-top': '-99'
+            'margin-top': '-95'
           }, 0);
         }
         else {

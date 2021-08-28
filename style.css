@@ -963,8 +963,16 @@ li {
   height: 100% !important;
 }
 
+#mega-menu-primary {
+  z-index: 999;
+}
+
 .mega-menu-link {
   background: transparent !important;
+}
+
+.mega-indicator {
+  display: none !important;
 }
 
 a.mega-menu-link,
@@ -987,23 +995,37 @@ a.mega-menu-link:active {
 
 /********** Logo and Nav Media Query ***********/
 
+@media only screen and (max-width: 1200px) {
+
+  a.mega-menu-link,
+  a.mega-menu-link:visited {
+    font-size: 16px !important;
+    line-height: 30px !important;
+  }
+
+}
+
 @media only screen and (max-width: 781px) {
 
   /* mega menu */
+  
+    .primary-navigation {
+      height: 67px;
+      width: 100%;
+      left: 0;
+      position: absolute;
+    }
 
   #mega-menu-primary {
-    padding: 50px 0 !important;
-  }
-
-  .primary-navigation {
-    height: 67px;
-    width: 100%;
-    left: 0;
-    position: absolute;
+    padding: 50px 0 0 !important;
   }
 
   #mega-menu-wrap-primary {
     width: 100%;
+  }
+
+  #mega-menu-primary {
+    border-bottom: 1px solid #FFDB79 !important;
   }
 
   #mega-menu-wrap-primary .mega-menu-toggle + #mega-menu-primary {
@@ -1026,6 +1048,8 @@ a.mega-menu-link:active {
 
   a.mega-menu-link,
   a.mega-menu-link:visited {
+    font-size: 24px !important;
+    line-height: 37px !important;
     padding: 20px 0 !important;
     height: auto !important;
     margin-top: 0 !important;
@@ -1039,18 +1063,22 @@ a.mega-menu-link:active {
 
 /********** mega menu, sub menu ***********/
 
-#mega-menu-item-234.mega-menu-item.mega-toggle-on > a {
+#mega-menu-item-234.mega-menu-item.mega-toggle-on > a,
+#mega-menu-item-539.mega-menu-item.mega-toggle-on > a  {
   color: #FFDB79 !important;
 }
 
-#mega-menu-item-234.mega-menu-item ul {
+#mega-menu-item-234.mega-menu-item ul,
+#mega-menu-item-539.mega-menu-item ul {
   position: absolute !important;
   left: 0 !important;
   width: 0 !important;
   transition: none !important;
+  overflow: hidden !important;
 }
 
-#mega-menu-item-234.mega-menu-item.mega-toggle-on ul {
+#mega-menu-item-234.mega-menu-item.mega-toggle-on ul,
+#mega-menu-item-539.mega-menu-item.mega-toggle-on ul {
   background: #393939 !important;
   position: fixed !important;
   left: 0 !important;
@@ -1063,14 +1091,24 @@ a.mega-menu-link:active {
   padding: 20px 0 40px !important;
 }
 
+#mega-menu-item-539.mega-menu-item.mega-toggle-on ul {
+  justify-content: space-around !important;
+}
+
 #mega-menu-item-234.mega-menu-item li {
   position: relative  !important;
   width: 40%  !important;
-  
+}
+
+#mega-menu-item-539.mega-menu-item li {
+  position: relative  !important;
+  width: auto  !important;  
 }
 
 #mega-menu-item-234.mega-menu-item li a,
-#mega-menu-item-234.mega-menu-item li a:visited {
+#mega-menu-item-234.mega-menu-item li a:visited,
+#mega-menu-item-539.mega-menu-item li a,
+#mega-menu-item-539.mega-menu-item li a:visited  {
   position: relative;
   font-size: 35px !important;
   line-height: 70px !important;
@@ -1081,12 +1119,16 @@ a.mega-menu-link:active {
 
 #mega-menu-item-234.mega-menu-item li a:hover,
 #mega-menu-item-234.mega-menu-item li a:active,
-#mega-menu-item-234.mega-menu-item li a:focus  {
+#mega-menu-item-234.mega-menu-item li a:focus,
+#mega-menu-item-539.mega-menu-item li a:hover,
+#mega-menu-item-539.mega-menu-item li a:active,
+#mega-menu-item-539.mega-menu-item li a:focus {
   transform: scale(1.05) !important;
   border: none !important;
 }
 
-#mega-menu-item-234.mega-menu-item li a::before {
+#mega-menu-item-234.mega-menu-item li a::before,
+#mega-menu-item-539.mega-menu-item li a::before {
   content: "•" !important;
   color: #fff !important;
   position: absolute !important;
@@ -1095,27 +1137,33 @@ a.mega-menu-link:active {
   left: -30px !important;
 }
 
-#mega-menu-item-234.mega-menu-item li:first-of-type a::before {
+#mega-menu-item-234.mega-menu-item li:first-of-type a::before,
+#mega-menu-item-539.mega-menu-item li:first-of-type a::before {
   color: #ff9493 !important;
 }
 
-#mega-menu-item-234.mega-menu-item li:nth-of-type(2) a::before {
+#mega-menu-item-234.mega-menu-item li:nth-of-type(2) a::before,
+#mega-menu-item-539.mega-menu-item li:nth-of-type(2) a::before {
   color: #9D8FFD !important;
 }
 
-#mega-menu-item-234.mega-menu-item li:nth-of-type(3) a::before {
+#mega-menu-item-234.mega-menu-item li:nth-of-type(3) a::before,
+#mega-menu-item-539.mega-menu-item li:nth-of-type(3) a::before {
   color: #FFCC43 !important;
 }
 
-#mega-menu-item-234.mega-menu-item li:nth-of-type(4) a::before {
+#mega-menu-item-234.mega-menu-item li:nth-of-type(4) a::before,
+#mega-menu-item-539.mega-menu-item li:nth-of-type(4) a::before {
   color: #A4FFCB !important;
 }
 
-#mega-menu-item-234.mega-menu-item li:nth-of-type(5) a::before {
+#mega-menu-item-234.mega-menu-item li:nth-of-type(5) a::before,
+#mega-menu-item-539.mega-menu-item li:nth-of-type(5) a::before {
   color: #93FAFF !important;
 }
 
-#mega-menu-item-234.mega-menu-item li:nth-of-type(6) a::before {
+#mega-menu-item-234.mega-menu-item li:nth-of-type(6) a::before,
+#mega-menu-item-539.mega-menu-item li:nth-of-type(6) a::before {
   color: #FFB44E !important;
 }
 
@@ -1123,7 +1171,8 @@ a.mega-menu-link:active {
 
 @media only screen and (max-width: 1200px) {
 
-  #mega-menu-item-234.mega-menu-item li a {
+  #mega-menu-item-234.mega-menu-item li a,
+  #mega-menu-item-539.mega-menu-item li a  {
     position: relative;
     font-size: 24px !important;
     line-height: 50px !important;
@@ -1133,26 +1182,31 @@ a.mega-menu-link:active {
 
 @media only screen and (max-width: 781px) {
 
-   #mega-menu-item-234.mega-menu-item.mega-toggle-on ul {
+   #mega-menu-item-234.mega-menu-item.mega-toggle-on ul,
+   #mega-menu-item-539.mega-menu-item.mega-toggle-on ul {
     position: relative !important;
   }
 
   /* Services menu */
-  #mega-menu-item-234 .mega-sub-menu{
+  #mega-menu-item-234 .mega-sub-menu,
+  #mega-menu-item-539 .mega-sub-menu { 
     visibility: hidden !important;
     opacity: 0 !important;
   }
 
-  #mega-menu-item-234.mega-toggle-on .mega-sub-menu {
+  #mega-menu-item-234.mega-toggle-on .mega-sub-menu,
+  #mega-menu-item-539.mega-toggle-on .mega-sub-menu {
     visibility: visible !important;
     opacity: 1 !important;
   }
 
-  #mega-menu-item-234.mega-menu-item li {
+  #mega-menu-item-234.mega-menu-item li,
+  #mega-menu-item-539.mega-menu-item li {
     width: 70% !important;
   }
 
-  #mega-menu-item-234.mega-menu-item li a {
+  #mega-menu-item-234.mega-menu-item li a,
+  #mega-menu-item-539.mega-menu-item li a {
     position: relative;
     font-size: 24px !important;
     line-height: 50px !important;
@@ -3023,7 +3077,6 @@ a.mega-menu-link:active {
 
 }
 
-
 /* ============================================================================================================================================================== */
 /* Contact Page */
 /* ============================================================================================================================================================== */
@@ -3049,4 +3102,30 @@ a.mega-menu-link:active {
 
 .contact-page .contact.black-ver .wpforms-container textarea {
   background: #000000a8 !important;
+}
+
+/* ============================================================================================================================================================== */
+/* Page Footer */
+/* ============================================================================================================================================================== */
+
+footer {
+  padding: 10px 4% !important;
+  background: #1f1f1f;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+footer .widget-area,
+footer .widget.widget_block,
+footer .footer-copyright {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 767px) {
+
+  footer  {
+    padding: 10px 7.5% !important;
+  }
 }
