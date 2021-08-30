@@ -20,7 +20,9 @@ console.log( "ready!" );
 // home video scroll down
 //  ============================================================================================================================================================== */
 
-    document.getElementById("homeVideo").scrollIntoView();
+    jQuery( document ).ready(function() {
+      document.getElementById("homeVideo").scrollIntoView();
+    });
 
     jQuery(window).resize(function() {
       var video = jQuery("#homeVideo").children("video");
@@ -47,10 +49,10 @@ console.log( "ready!" );
 
     function toggleSubMenuScrollRemover() {
       if (window.matchMedia('(max-width: 781px)').matches) {
-          console.log("if");
+          // console.log("if");
       } 
       else {
-          console.log("else");
+          // console.log("else");
           if (jQuery(document).scrollTop() > 1) {
             jQuery("#mega-menu-item-234").removeClass( "mega-toggle-on" )
           }
@@ -63,7 +65,6 @@ console.log( "ready!" );
     jQuery(window).scroll(function() {
       toggleSubMenuScrollRemover();
     });
-
 
 }); //End jQuery Document ready function
 

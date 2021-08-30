@@ -26,7 +26,7 @@ h1::before {
 /* figure styles */
 
 .wp-block-image {
-    background: rgb(0,0,0, 0.1);
+    background: rgb(0,0,0, 0.1) !important;
 }
 
 /* video styles */
