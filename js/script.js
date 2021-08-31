@@ -20,28 +20,33 @@ console.log( "ready!" );
 // home video scroll down
 //  ============================================================================================================================================================== */
 
-    jQuery( document ).ready(function() {
-      document.getElementById("homeVideo").scrollIntoView();
-    });
-
-    jQuery(window).resize(function() {
-      var video = jQuery("#homeVideo").children("video");
-      var videoHeight = jQuery("#homeVideo").children("video").height();
-      jQuery("#homeVideo").height(videoHeight);
-
-      jQuery(window).scroll(function() {
-        if (jQuery(document).scrollTop() > 1) {
-          jQuery(video).animate({
-            'margin-top': '-95'
-          }, 0);
+      jQuery(window).resize(function() {
+        var video = jQuery("#homeVideo").children("video");
+        var videoHeight = jQuery("#homeVideo").children("video").height();
+        jQuery("#homeVideo").height(videoHeight);
+  
+        if (jQuery(window).width() > 782) {
+          jQuery(window).scroll(function() {
+            if (jQuery(document).scrollTop() > 1) {
+              jQuery(video).animate({
+                'margin-top': '-95'
+    
+              }, 0);
+            }
+            else {
+              jQuery(video).animate({
+                'margin-top': '0'
+              }, 0);
+            }
+          });
         }
-        else {
-          jQuery(video).animate({
-            'margin-top': '0'
-          }, 0);
-        }
-      });
-    }).resize();
+      }).resize();
+  
+      if (jQuery(window).width() > 782) {
+        jQuery( document ).ready(function() {
+          document.getElementById("homeVideo").scrollIntoView();
+        });
+      }
 
 // ============================================================================================================================================================== */
 // remove sub menu on scroll for non hamburger screen sizes

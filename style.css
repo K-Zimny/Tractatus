@@ -1015,14 +1015,6 @@ a.mega-menu-link:active {
 
 @media only screen and (max-width: 781px) {
 
-  /* site branding */
-
-  .site-branding {
-    margin-left: -10% !important;
-  }
-
-
-
   /* mega menu */
   
   .primary-navigation {
@@ -1073,6 +1065,23 @@ a.mega-menu-link:active {
     margin-bottom: 0 !important;
   }
 
+  a.mega-menu-link:hover,
+  a.mega-menu-link:focus,
+  a.mega-menu-link:active {
+    transform: scale(1.02) !important;
+  }
+
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  /* site branding */
+
+  .site-branding {
+    margin-left: -10% !important;
+  }
+
 }
 
 /*========= end Logo and Nav Media Query =========*/
@@ -1080,8 +1089,11 @@ a.mega-menu-link:active {
 
 /********** mega menu, sub menu ***********/
 
+
+
 #mega-menu-item-234.mega-menu-item.mega-toggle-on > a,
-#mega-menu-item-539.mega-menu-item.mega-toggle-on > a  {
+#mega-menu-item-539.mega-menu-item.mega-toggle-on > a,
+#mega-menu-primary > li > a:hover {
   color: #FFDB79 !important;
 }
 
@@ -1132,6 +1144,11 @@ a.mega-menu-link:active {
   padding: 20px 0 !important;
   margin: 0 !important;
   transition: all ease .3s !important;
+}
+
+#mega-menu-item-234.mega-menu-item li a,
+#mega-menu-item-234.mega-menu-item li a:visited {
+  width: 80% !important;
 }
 
 #mega-menu-item-234.mega-menu-item li a:hover,
@@ -1259,6 +1276,18 @@ a.mega-menu-link:active {
     left: -40px !important;
   }
 
+  .mega-menu-toggle .mega-toggle-animated-inner,
+  .mega-menu-toggle .mega-toggle-animated-inner::before,
+  .mega-menu-toggle .mega-toggle-animated-inner::after {
+    background: #fff !important;
+  }
+
+  .mega-menu-toggle.mega-menu-open .mega-toggle-animated-inner,
+  .mega-menu-toggle.mega-menu-open .mega-toggle-animated-inner::before,
+  .mega-menu-toggle.mega-menu-open .mega-toggle-animated-inner::after {
+    background: #FFDB79 !important;  
+  }
+
 }
 
 /*========= end sub menu Media Query =========*/
@@ -1292,7 +1321,9 @@ a.mega-menu-link:active {
 }
 
 .page-header figure {
-  /* margin-top: -68px !important; */
+  background: url(https://tractatusdesign.studio/wp-content/uploads/2021/08/tract-white-no-text.svg) center center / 30% 50% no-repeat;
+  z-index: -99999;
+  position: relative;
 }
 
 .page-header figure video {
@@ -1862,6 +1893,15 @@ a.mega-menu-link:active {
 
 /********** end Button Styles ***********/
 
+/********** WP block cover ***********/
+
+.wp-block-cover, .wp-block-cover-image {
+  padding: 0 !important;
+}
+
+/*========= end WP block cover =========*/
+
+
 /* ============================================================================================================================================================== */
 /* Homepage */
 /* ============================================================================================================================================================== */
@@ -2367,7 +2407,7 @@ a.mega-menu-link:active {
 .services .services-container > .wp-block-group__inner-container > .wp-block-group p {
   opacity: 0;
   position: absolute;
-  transition: all ease .3s;
+  transition: all ease .1s;
 }
 
 .services .services-container > .wp-block-group__inner-container > .wp-block-group:hover p,
@@ -2375,6 +2415,7 @@ a.mega-menu-link:active {
 .services .services-container > .wp-block-group__inner-container > .wp-block-group:focus p {
   position: static;
   opacity: 1;
+  transition: all ease 1s;
 }
 
 /* media query service boxes animation */
@@ -2741,7 +2782,7 @@ a.mega-menu-link:active {
   animation-duration: 17s;
 }
 
-.sub-services .shards li:nth-child(20){
+.sub-services .shards li:nth-child(20) {
   left: 50%;
   width: 250px;
   height: 250px;
@@ -2751,7 +2792,7 @@ a.mega-menu-link:active {
 
 @keyframes animate-shards {
 
-  0%{
+  0% {
       transform: translateY(0) rotate(0deg);
       opacity: 0;
       border-radius: 0;
@@ -2759,8 +2800,8 @@ a.mega-menu-link:active {
       clip-path: polygon(-6% 112%, 212% 44%, 34% -2%);
   }
 
-  100%{
-      transform: translateY(-2000px) rotate(720deg);
+  100% {
+      transform: translateY(-3000px) rotate(720deg);
       opacity: 1;
       border-radius: 50%;
       clip-path: polygon(17% -2%, 4% 110%, 156% 44%);
@@ -2768,6 +2809,14 @@ a.mega-menu-link:active {
 
 }
 
+@media only screen and (max-width: 1200px) {
+
+  .sub-services .shards li:nth-child(odd) {
+    display: none;
+  } 
+  
+
+} 
 
 
 /*========= end Homepage Sub-Services Section =========*/
@@ -2785,6 +2834,7 @@ a.mega-menu-link:active {
 /***** Service item grid *****/
 
 .service {
+  overflow: hidden;
   position: relative;
   background: linear-gradient(90deg, #1F1F1F 50%, #FFFEFA 50%);
 }
@@ -2861,6 +2911,7 @@ a.mega-menu-link:active {
 
 .service .service-container > .wp-block-group__inner-container > .wp-block-group:first-of-type {
   margin-top: -30px !important;
+  padding-bottom: 30px;
 }
 
 /* img styles */
@@ -3452,6 +3503,7 @@ background: #000000a8 !important;
 
 .non-profit h1 strong {
   color: #000;
+  font-family: 'Montserrat', sans-serif;
   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #4B4B4B;
@@ -3461,7 +3513,14 @@ background: #000000a8 !important;
 
 .non-profit h2,
 .non-profit p {
+  font-family: 'Montserrat', sans-serif;
   color: #1F1F1F;
+}
+
+.non-profit p {
+  color: #1F1F1F;
+  font-size: 22px;
+  line-height: 35px;
 }
 
 .non-profit .heart-container > .wp-block-group__inner-container {
@@ -3493,10 +3552,29 @@ background: #000000a8 !important;
 
 }
 
+/* media query */ 
+
+@media only screen and (max-width: 1200px) {
+
+  .non-profit p {
+    color: #1F1F1F;
+    font-size: 20px;
+    line-height: 35px;
+  }
+
+} 
+
 @media only screen and (max-width: 767px) {
 
   .non-profit h1 strong {
     text-align: left;
+    -webkit-text-stroke-width: 1px;
+  }
+
+  .non-profit p {
+    color: #1F1F1F;
+    font-size: 18px;
+    line-height: 35px;
   }
   
 }
@@ -3514,11 +3592,16 @@ background: #000000a8 !important;
 
 .studio-inner-page .wp-block-cover {
   align-items: center;
+  padding-bottom: 60px !important;
 }
 
 .studio-inner-page .page-header h1 {
   display: block;
   margin-bottom: 30px !important;
+}
+
+.studio-inner-page .page-header h1 a {
+  font-size: 30px;
 }
 
 .studio-inner-page .page-header h1 strong {
@@ -3706,6 +3789,17 @@ background: #000000a8 !important;
 .studio-inner-page .case-study-content p {
   font-family: 'Montserrat', sans-serif;
   color: #4A4B4B;
+  line-height: 40px;;
+}
+
+/* media Queries */
+
+@media only screen and (max-width: 781px) {
+
+  .studio-inner-page .case-study-content p {
+    line-height: 35px;;
+  }
+
 }
 
 /********** end studio case study ***********/
@@ -3802,7 +3896,7 @@ footer .footer-socials > .wp-block-group__inner-container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
-  align-items: center;
+  align-items: baseline;
 }
 
 footer .footer-socials figure {
@@ -3840,9 +3934,32 @@ footer .footer-copyright {
   margin-bottom: 0;
 }
 
+/* media query */
+
+@media only screen and (max-width: 1200px) {
+
+  footer .footer-socials figure {
+    margin: 0 !important;
+    width: 66px;
+    height: 40px;
+  }
+
+  footer .footer-socials figure.mail-icon {
+    height: 30px;  
+  }
+  
+}
+
 @media only screen and (max-width: 767px) {
 
   footer  {
-    padding: 10px 7.5% !important;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 30px 7.5% 10px !important;
   }
+
+  footer .footer-copyright {
+    order: 2;
+  }
+
 }
