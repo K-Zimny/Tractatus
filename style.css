@@ -218,6 +218,34 @@ li {
   color: #FFFFFF;
 }
 
+/* Media Queries */
+
+@media only screen and (max-width: 1919px) {
+
+  h1 strong {
+    font-size: 70px;
+    line-height: 90px;
+  }
+
+  h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  h3 {
+    font-size: 35px;
+    line-height: 50px;
+  }
+
+  p,
+  a,
+  li {
+    font-size: 22px;
+    line-height: 35px;
+  }
+
+}
+
 @media only screen and (max-width: 1200px) {
 
   h1 strong {
@@ -238,7 +266,7 @@ li {
   p,
   a,
   li {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 35px;
   }
     
@@ -921,6 +949,26 @@ li {
 /* Global Classes */
 /* ============================================================================================================================================================== */
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #FFDB79;
+}
+
 /********** Logo and Nav ***********/
 
 .site-header {
@@ -1511,23 +1559,46 @@ a.mega-menu-link:active {
   clip-path: polygon(17% -2%, 4% 110%, 156% 44%);  
 }
 
+/* Media query */
+
+@media only screen and (max-width: 1919px) {
+
+  .two-col_w-img-right.lg h2,
+  .two-col_w-img-left.lg h2 {
+    font-size: 75px; 
+  }
+
+  .two-col_w-img-right.lg h3,
+  .two-col_w-img-left.lg h3 {
+    font-size: 45px; 
+  }
+
+  .two-col_w-img-right p,
+  .two-col_w-img-left p {
+    font-size: 22px;
+    line-height: 40px;  
+  }
+
+}
+
+
 @media only screen and (max-width: 1200px) {
 
   .two-col_w-img-right.lg h2,
   .two-col_w-img-left.lg h2 {
-    font-size: 75px;
+    font-size: 65px;
     line-height: 73px;
   }
 
   .two-col_w-img-right.lg h3,
   .two-col_w-img-left.lg h3 {
-    font-size: 44px; 
+    font-size: 35px; 
     line-height: 55px;
   }
 
   .two-col_w-img-right p,
   .two-col_w-img-left p {
-    font-size: 26px;
+    font-size: 20px;
     line-height: 40px;
   } 
 
@@ -1566,7 +1637,7 @@ a.mega-menu-link:active {
 
   .two-col_w-img-right p,
   .two-col_w-img-left p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 35px;
   }
 
@@ -1602,7 +1673,7 @@ a.mega-menu-link:active {
 
 .wpforms-field-label {
   font-family: 'Source Code Pro', monospace !important;
-  font-size: 30px !important; 
+  font-size: 26px !important; 
   font-weight: normal !important;
   line-height: 37px !important;   
   color: #4A4A4A !important;   
@@ -1620,7 +1691,7 @@ a.mega-menu-link:active {
 }
 
 .wpforms-container input {
-  width: 380px !important;
+  width: 50% !important;
   max-width: 100% !important;
   border: none !important;
   border-bottom: 1px solid #707070 !important;
@@ -1640,10 +1711,10 @@ a.mega-menu-link:active {
 
 .wpforms-submit-container button {
   font-family: 'Source Code Pro', monospace !important;
-  padding: 25px 100px !important;
+  padding: 17px 75px !important;
   background: transparent !important;
   border: 1px solid #707070 !important;
-  font-size: 30px !important;
+  font-size: 26px !important;
   color: #000 !important;
   transition: all ease .3s;
 }
@@ -1679,6 +1750,10 @@ a.mega-menu-link:active {
   color: #fff;
 }
 
+.contact.black-ver .wpforms-confirmation-scroll p {
+  color: #1f1f1f !important; 
+}
+
 .contact.black-ver .wpforms-submit-container button:hover,
 .contact.black-ver .wpforms-submit-container button:active,
 .contact.black-ver .wpforms-submit-container button:focus {
@@ -1686,23 +1761,90 @@ a.mega-menu-link:active {
   background-color: #fff !important;
 }
 
+/***** Contact form montserrat *****/
+
+.font-montserrat .wpforms-field-label,
+.font-montserrat .wpforms-container input, 
+.font-montserrat .wpforms-container textarea,
+.font-montserrat .wpforms-submit-container button {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 22px !important;
+}
+
+.font-montserrat #wpforms-928-field_8 li {
+  font-family: 'Montserrat', sans-serif !important;
+  color: #4A4A4A !important;
+  
+}
+
+.font-montserrat #wpforms-928-field_8_1 {
+  width: auto !important;
+}
+
+
+@media only screen and (max-width: 1919px) {
+
+  .wpforms-field-label,
+  .wpforms-submit-container button {
+    font-size: 22px !important; 
+    line-height: 37px !important;   
+  }
+
+  .font-montserrat .wpforms-field-label,
+  .font-montserrat .wpforms-container input, 
+  .font-montserrat .wpforms-container textarea,
+  .font-montserrat .wpforms-submit-container button {
+    font-size: 22px !important;
+  }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .wpforms-field-label,
+  .wpforms-submit-container button {
+    font-size: 20px !important; 
+    line-height: 37px !important;   
+  }
+
+  .font-montserrat .wpforms-field-label,
+  .font-montserrat .wpforms-container input, 
+  .font-montserrat .wpforms-container textarea,
+  .font-montserrat .wpforms-submit-container button {
+    font-size: 20px !important;
+  }
+
+}
+
 @media only screen and (max-width: 767px) {
 
   .contact h2 {
-    font-size: 24px;
-    line-height: 31px;  
+    font-size: 30px;
+    line-height: 40px;  
   }
 
   .contact p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 35px;
+  }
+
+  .font-montserrat .wpforms-field-label,
+  .font-montserrat .wpforms-container input, 
+  .font-montserrat .wpforms-container textarea,
+  .font-montserrat .wpforms-submit-container button {
+    font-size: 18px !important;
   }
 
   .wpforms-field-label,
   .wpforms-container input,
   .wpforms-container textarea {
-    font-size: 16px !important;
-    line-height: 20px !important;
+    font-size: 18px !important;
+    line-height: 35px !important;
+  }
+
+  .wpforms-container input {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .wpforms-submit-container button {
@@ -1797,7 +1939,7 @@ a.mega-menu-link:active {
 
 .yt-lightbox a:hover,
 .yt-lightbox a:focus {
-  filter: drop-shadow(2px 4px 6px black)
+  box-shadow: 0px 0px 20px black;
 }
 
 .yt-lightbox a::after {
@@ -2283,6 +2425,22 @@ a.mega-menu-link:active {
 
 /***** Homepage Sub Header 1200px*****/
 
+
+@media only screen and (max-width: 1919px) {
+
+  .homepage-subheader h2 {
+    font-size: 80px;
+    line-height: 110px;
+  }
+
+  .homepage-subheader p {
+    font-size: 35px;
+    line-height: 60px;
+  } 
+
+}
+
+
 @media only screen and (max-width: 1200px) {
 
   .homepage-subheader h2 {
@@ -2528,6 +2686,25 @@ a.mega-menu-link:active {
 }
 
 /********** Homepage Services Section Media Query***********/
+
+@media only screen and (max-width: 1919px) {
+
+  .services h2 {
+    font-size: 180px;
+  }
+
+  .services h3 {
+    font-size: 70px;
+    line-height: 85px;
+  }
+
+  .services .services-container  > .wp-block-group__inner-container p {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+}
+
 
 @media only screen and (max-width: 1200px) {
 
@@ -2885,7 +3062,7 @@ a.mega-menu-link:active {
 }
 
 .service h2 {
-  font-size: 48px;
+  font-size: 40px;
   color: #4A4A4A;  
   text-decoration: underline;
   text-decoration-thickness: 2px;
@@ -2895,7 +3072,7 @@ a.mega-menu-link:active {
 }
 
 .service p {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .service ul {
@@ -2903,7 +3080,7 @@ a.mega-menu-link:active {
 }
 
 .service li {
-  font-size: 24px;
+  font-size: 22px;
   color: #4A4A4A;
   font-weight: bold;
 }
@@ -3162,7 +3339,7 @@ a.mega-menu-link:active {
 /* text styles  */
 
 .services-collapsed h2 {
-  font-size: 100px;  
+  font-size: 80px;  
   color: #fff; 
   line-height: normal;
   padding: 50px 0;
@@ -3171,9 +3348,9 @@ a.mega-menu-link:active {
 
 .services-collapsed a,
 .services-collapsed a:visited {
-  font-size: 30px;
+  font-size: 24px;
   color: #1F1F1F;
-  line-height: 40px;  
+  line-height: 32px;  
   font-weight: 500;
   padding: 20px 70px;
 }
@@ -3215,11 +3392,21 @@ a.mega-menu-link:active {
   margin-bottom: 0;
 }
 
+@media only screen and (max-width: 1919px) {
+
+  .services-collapsed a,
+  .services-collapsed a:visited {
+    padding: 20px 50px;
+  }
+
+}
+
+
 @media only screen and (max-width: 1200px) {
 
   .services-collapsed a,
   .services-collapsed a:visited {
-    font-size: 25px;
+    font-size: 22px;
   } 
 
 }
@@ -3358,6 +3545,17 @@ a.mega-menu-link:active {
 /* About Page */
 /* ============================================================================================================================================================== */
 
+/* About page video header  */
+
+  .about-page-header figure {
+    height: 150px;
+  }
+
+  .about-page-header video {
+    height: 100%;
+    object-fit: cover;
+  }
+
 /* about page header */
 
 .about-page-header p {
@@ -3372,7 +3570,7 @@ a.mega-menu-link:active {
 .about-page-text-container h2 {
   color: #ffffff; 
   padding: 0 0 125px;
-  font-size: 260px;  
+  font-size: 210px;  
   line-height: normal;
   margin-bottom: 0 !important;
 }
@@ -3407,11 +3605,24 @@ a.mega-menu-link:active {
   margin-top: 30px !important;
 }
 
+/* media Query */
+
+@media only screen and (max-width: 1919px) {
+
+  .about-page-text-container h2 {
+    padding: 0 0 75px;
+    font-size: 175px;  
+  }
+
+}
+
+
+
 @media only screen and (max-width: 1200px) {
 
   .about-page-text-container h2 {
-    padding: 0 0 100px;
-    font-size: 150px;  
+    padding: 0 0 60px;
+    font-size: 135px;  
   }
 
   .about-page-text-container .two-col_w-img-right figcaption,
@@ -3426,7 +3637,7 @@ a.mega-menu-link:active {
 
   .about-page-text-container h2 {
     padding: 0 0 50px;
-    font-size: 100px;  
+    font-size: 80px;  
   }
 
   .about-page-text-container .two-col_w-img-right figcaption,
@@ -3449,11 +3660,11 @@ background-size: cover;
 }
 
 .contact-page h1 {
-font-size: 50px;
-font-size: clamp(45px, 15vw, 210px);
-color: #fff;
-line-height: normal;
-font-weight: normal;
+  font-size: 50px;
+  font-size: clamp(38px, 12vw, 150px);
+  color: #fff;
+  line-height: normal;
+  font-weight: normal;
 }
 
 .contact-page .non-profit-block {
@@ -3615,18 +3826,19 @@ background: #000000a8 !important;
 .studio-inner-page .page-header .cover-content-container {
   background: #FFFFFF; 
   padding: 20px;
+  filter: drop-shadow(15px 15px 0px #1f1f1f);
 }
 
 .studio-inner-page .page-header .cover-content-container p {
-  font-size: clamp(28px, 6vw, 54px);
-  line-height: clamp(30px, 6vw, 48px);
+  font-size: clamp(28px, 6vw, 40px);
+  line-height: clamp(38px, 7vw, 50px);
   color: #4A4B4B;
-  font-weight: bold;
-  margin: 35px 0 !important;
+  font-weight: 400;
+  margin: 25px 0 !important;
 }
 
 .studio-inner-page .page-header .cover-content-container p:first-of-type {
-  margin: 0 0 35px !important;
+  margin: 0 0 25px !important;
 }
 
 .studio-inner-page .page-header .cover-content-container p:last-of-type {
@@ -3681,7 +3893,7 @@ background: #000000a8 !important;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #4B4B4B;
-  font-size: 90px;
+  font-size: 85px;
   line-height: 114px;
   margin-bottom: 20px;
 }
@@ -3709,7 +3921,6 @@ background: #000000a8 !important;
 
 .studio-inner-page .studio-project-card-content > .wp-block-group__inner-container .wp-block-group:first-child p {
   color: #4A4B4B;
-  font-weight: bold;
   padding-left: 5%;
 }
 
@@ -3718,13 +3929,23 @@ background: #000000a8 !important;
 }
 
 .studio-inner-page .studio-project-card-content li {
-  font-weight: bold;
   color: #4A4B4B;
 }
 
 /********** end studio Project Card ***********/
 
 /********** studio Project Card Media Query***********/
+
+@media only screen and (max-width: 1919px) {
+
+  .studio-inner-page .studio-project-card-content h2 {
+    font-size: 75px;
+    line-height: 100px;
+  }
+
+}
+
+
 
 @media only screen and (max-width: 1200px) {
 
@@ -3815,14 +4036,14 @@ background: #000000a8 !important;
 }
 
 .studio-inner-page .non-profit-block h2 {
-  font-size: 45px;
-  line-height: 55px;
+  font-size: 35px;
+  line-height: 45px;
   color: #1F1F1F 
 }
 
 .studio-inner-page .non-profit-block a {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 30px;
   color: #1F1F1F;
   position: relative;
 }
