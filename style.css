@@ -217,7 +217,35 @@ li {
   line-height: 35px;
   color: #FFFFFF;
 }
- 
+
+/* Media Queries */
+
+@media only screen and (max-width: 1919px) {
+
+  h1 strong {
+    font-size: 70px;
+    line-height: 90px;
+  }
+
+  h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  h3 {
+    font-size: 35px;
+    line-height: 50px;
+  }
+
+  p,
+  a,
+  li {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+}
+
 @media only screen and (max-width: 1200px) {
 
   h1 strong {
@@ -238,7 +266,7 @@ li {
   p,
   a,
   li {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 35px;
   }
     
@@ -1511,23 +1539,41 @@ a.mega-menu-link:active {
   clip-path: polygon(17% -2%, 4% 110%, 156% 44%);  
 }
 
+/* Media query */
+
+@media only screen and (max-width: 1919px) {
+
+  .two-col_w-img-right.lg h2,
+  .two-col_w-img-left.lg h2 {
+    font-size: 75px; 
+  }
+
+  .two-col_w-img-right p,
+  .two-col_w-img-left p {
+    font-size: 22px;
+    line-height: 40px;  
+  }
+
+}
+
+
 @media only screen and (max-width: 1200px) {
 
   .two-col_w-img-right.lg h2,
   .two-col_w-img-left.lg h2 {
-    font-size: 75px;
+    font-size: 65px;
     line-height: 73px;
   }
 
   .two-col_w-img-right.lg h3,
   .two-col_w-img-left.lg h3 {
-    font-size: 44px; 
+    font-size: 35px; 
     line-height: 55px;
   }
 
   .two-col_w-img-right p,
   .two-col_w-img-left p {
-    font-size: 26px;
+    font-size: 20px;
     line-height: 40px;
   } 
 
@@ -1686,23 +1732,32 @@ a.mega-menu-link:active {
   background-color: #fff !important;
 }
 
+@media only screen and (max-width: 1919px) {
+
+  .wpforms-field-label {
+    font-size: 20px !important; 
+    line-height: 37px !important;   
+  }
+
+}
+
 @media only screen and (max-width: 767px) {
 
   .contact h2 {
-    font-size: 24px;
-    line-height: 31px;  
+    font-size: 30px;
+    line-height: 40px;  
   }
 
   .contact p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 35px;
   }
 
   .wpforms-field-label,
   .wpforms-container input,
   .wpforms-container textarea {
-    font-size: 16px !important;
-    line-height: 20px !important;
+    font-size: 18px !important;
+    line-height: 35px !important;
   }
 
   .wpforms-submit-container button {
@@ -2283,6 +2338,22 @@ a.mega-menu-link:active {
 
 /***** Homepage Sub Header 1200px*****/
 
+
+@media only screen and (max-width: 1919px) {
+
+  .homepage-subheader h2 {
+    font-size: 80px;
+    line-height: 110px;
+  }
+
+  .homepage-subheader p {
+    font-size: 35px;
+    line-height: 60px;
+  } 
+
+}
+
+
 @media only screen and (max-width: 1200px) {
 
   .homepage-subheader h2 {
@@ -2528,6 +2599,25 @@ a.mega-menu-link:active {
 }
 
 /********** Homepage Services Section Media Query***********/
+
+@media only screen and (max-width: 1919px) {
+
+  .services h2 {
+    font-size: 180px;
+  }
+
+  .services h3 {
+    font-size: 70px;
+    line-height: 85px;
+  }
+
+  .services .services-container  > .wp-block-group__inner-container p {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+}
+
 
 @media only screen and (max-width: 1200px) {
 
