@@ -190,7 +190,7 @@ h3 {
 }
 
 p {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 26px;
   font-weight: 400;
   line-height: 35px;
@@ -198,7 +198,7 @@ p {
 }
 
 a {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 26px;
   font-weight: 400;
   line-height: 35px;  
@@ -211,7 +211,7 @@ a:hover {
 }
 
 li {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 26px;
   font-weight: 400;
   line-height: 35px;
@@ -1383,7 +1383,7 @@ a.mega-menu-link:active {
 }
 
 .page-header h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Source Code Pro', monospace;
 }
 
 /***** alt header content *****/
@@ -1924,6 +1924,7 @@ a.mega-menu-link:active {
 }
 
 .home-header p {
+  font-family: 'Source Code Pro', monospace;
   color: #4B4B4C;
 }
 
