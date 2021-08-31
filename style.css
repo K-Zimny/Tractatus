@@ -155,7 +155,7 @@ h1 strong {
   display: inline-block;
   font-family: 'Source Code Pro', monospace;
   color: #1F1F1F;
-  font-size: 90px;
+  font-size: 70px;
   line-height: 110px;
   word-break: normal;
 }
@@ -174,7 +174,7 @@ h1 {
 h2 {
   font-family: 'Source Code Pro', monospace;
   color: #FFFFFF;
-  font-size: 75px;
+  font-size: 55px;
   font-weight: bold;
   line-height: 100px;
   letter-spacing: 0px;
@@ -183,7 +183,7 @@ h2 {
 h3 {
   font-family: 'Source Code Pro', monospace;
   color: #FFFFFF;
-  font-size: 60px;
+  font-size: 45px;
   font-weight: bold;
   line-height: 75px;
   letter-spacing: 0px;
@@ -191,7 +191,7 @@ h3 {
 
 p {
   font-family: 'Source Code Pro', monospace;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 35px;
   color: #FFFFFF;
@@ -199,7 +199,7 @@ p {
 
 a {
   font-family: 'Source Code Pro', monospace;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 35px;  
   border: none;
@@ -212,7 +212,7 @@ a:hover {
 
 li {
   font-family: 'Source Code Pro', monospace;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 35px;
   color: #FFFFFF;
@@ -2184,7 +2184,7 @@ a.mega-menu-link:active {
 .homepage-subheader h2 {
   display: inline-block;
   position: relative;
-  font-size: 120px;
+  font-size: 70px;
   line-height: 150px;
   padding: 30px 50px;
 }
@@ -2258,7 +2258,7 @@ a.mega-menu-link:active {
   margin-top: 50px !important;
   margin-bottom: 0px !important;
   padding: 0 10%;
-  font-size: 45px;
+  font-size: 30px;
   font-weight: bold;
   line-height: 80px;
 } 
@@ -2334,7 +2334,7 @@ a.mega-menu-link:active {
   position: relative;
   background: #1F1F1F 50%;
   padding: 150px 0 175px;
-  font-size: 245px;  
+  font-size: 150px;  
   line-height: normal;
   color: #fff; 
   margin-bottom: 0 !important;
