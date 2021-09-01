@@ -2584,6 +2584,10 @@ a.mega-menu-link:active {
 
 /* service boxes js and animation */
 
+.no-touch {
+  touch-action: none;
+}
+
 .service-accordion {
   cursor: pointer;
   -webkit-touch-callout: none;
@@ -2593,6 +2597,7 @@ a.mega-menu-link:active {
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
+
 }
 
 .service-accordion.accordion-closed {

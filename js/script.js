@@ -83,12 +83,10 @@ console.log( "ready!" );
     jQuery('.service-accordion').attr('tabindex',0);
 
     jQuery('.service-accordion').on("click",function() {
-        if (jQuery(".service-accordion").hasClass("accordion-animation-done")) {
-          jQuery('.service-accordion').css({"filter": "brightness(1)"}); 
-          jQuery('.service-accordion').removeClass("accordion-animation-done");
-        }
-      // var halfHeight = jQuery(window).height() / 3;
-
+      if (jQuery(".service-accordion").hasClass("accordion-animation-done")) {
+        jQuery('.service-accordion').css({"filter": "brightness(1)"}); 
+        jQuery('.service-accordion').removeClass("accordion-animation-done");
+      }
       if (jQuery('.service-accordion').hasClass("accordion-link")) {
         jQuery('.service-accordion').css({"filter": "brightness(1) !important"}); 
       }
@@ -105,9 +103,15 @@ console.log( "ready!" );
         }, 600);
         jQuery(this).addClass("accordion-open");
         window.setTimeout(function() {
-          jQuery('.service-accordion').addClass("accordion-animation-done");  
-        }, 2000);
+          jQuery('.service-accordion').addClass("accordion-animation-done"); 
+        }, 1600);
         jQuery(this).removeClass("accordion-closed");
+        jQuery(window).on('mousewheel', function() {
+          jQuery('html, body').stop();
+        });
+        jQuery(window).on('touchmove', function() {
+          jQuery('html, body').stop();
+        });
         if (window.matchMedia('(max-width: 1200px)').matches) {
           jQuery('html, body').animate({
             scrollTop: jQuery(this).offset().top + -5
@@ -138,13 +142,6 @@ console.log( "ready!" );
       console.log("Im hit");
       jQuery('.service-accordion').addClass("accordion-link");
     });
-
-    // jQuery('.service-accordion').on("click",function() {
-    //   if (jQuery(".service-accordion").hasClass("accordion-animation-done")) {
-    //     jQuery('.service-accordion').css({"filter": "brightness(1)"}); 
-    //     jQuery('.service-accordion').removeClass("accordion-animation-done");
-    //   }
-    // });
 
     // Used for making accordion expand on enter key press
     jQuery('.service-accordion').keypress(function (e) {
