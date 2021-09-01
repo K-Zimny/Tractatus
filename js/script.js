@@ -71,5 +71,62 @@ console.log( "ready!" );
       toggleSubMenuScrollRemover();
     });
 
+// ============================================================================================================================================================== */
+// Add accordion and tabindex to service tabs homepage
+//  ============================================================================================================================================================== */
+
+    jQuery('.service-accordion').attr('tabindex',0);
+
+    jQuery('.service-accordion').on("click",function() {
+      var halfHeight = jQuery(window).height() / 3;
+      jQuery('.service-accordion').css({"filter": "brightness(.5)"});
+      if (jQuery(this).hasClass("accordion-closed")) {
+        jQuery(this).find("p").animate({
+          opacity: "toggle",
+          height: "toggle",
+          "marginBottom": "+=50px"
+        }, 600);
+        jQuery(this).addClass("accordion-open");
+        jQuery(this).removeClass("accordion-closed");
+        if (window.matchMedia('(max-width: 781px)').matches) {
+          jQuery('html, body').animate({
+            scrollTop: jQuery(this).offset().top + -50
+          }, 1500);
+        } 
+        else {
+          jQuery('html, body').animate({
+            scrollTop: jQuery(this).offset().top + -halfHeight
+          }, 1500);
+        }
+      }
+      else {
+        //Do nothing 
+      }     
+    });
+
+    // Used for making accordion expand on enter key press
+    jQuery('.service-accordion').keypress(function (e) {
+      var key = e.which;
+      if(key == 13)  // the enter key code
+      {
+        if (jQuery(this).hasClass("accordion-closed")) {
+          jQuery(this).find("p").animate({
+            opacity: "toggle",
+            height: "toggle",
+            "marginBottom": "+=50px"
+          }, 600);
+          jQuery(this).addClass("accordion-open");
+          jQuery(this).removeClass("accordion-closed");
+          jQuery('html, body').animate({
+            scrollTop: jQuery(this).offset().top + -100
+          }, 1000);
+        }
+    else {
+    //Do nothing 
+    }
+
+      }
+    });  
+
 }); //End jQuery Document ready function
 
