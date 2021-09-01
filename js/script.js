@@ -20,33 +20,37 @@ console.log( "ready!" );
 // home video scroll down
 //  ============================================================================================================================================================== */
 
-      jQuery(window).resize(function() {
-        var video = jQuery("#homeVideo").children("video");
-        var videoHeight = jQuery("#homeVideo").children("video").height();
-        jQuery("#homeVideo").height(videoHeight);
-  
-        if (jQuery(window).width() > 782) {
-          jQuery(window).scroll(function() {
-            if (jQuery(document).scrollTop() > 1) {
-              jQuery(video).animate({
-                'margin-top': '-95'
+    if (jQuery("body").hasClass("home")) {
+        console.log("homepage");
+
+        jQuery(window).resize(function() {
+          var video = jQuery("#homeVideo").children("video");
+          var videoHeight = jQuery("#homeVideo").children("video").height();
+          jQuery("#homeVideo").height(videoHeight);
     
-              }, 0);
-            }
-            else {
-              jQuery(video).animate({
-                'margin-top': '0'
-              }, 0);
-            }
+          if (jQuery(window).width() > 782) {
+            jQuery(window).scroll(function() {
+              if (jQuery(document).scrollTop() > 1) {
+                jQuery(video).animate({
+                  'margin-top': '-75'
+      
+                }, 0);
+              }
+              else {
+                jQuery(video).animate({
+                  'margin-top': '0'
+                }, 0);
+              }
+            });
+          }
+        }).resize();
+    
+        if (jQuery(window).width() > 782) {
+          jQuery( document ).ready(function() {
+            document.getElementById("homeVideo").scrollIntoView();
           });
         }
-      }).resize();
-  
-      if (jQuery(window).width() > 782) {
-        jQuery( document ).ready(function() {
-          document.getElementById("homeVideo").scrollIntoView();
-        });
-      }
+    }
 
 // ============================================================================================================================================================== */
 // remove sub menu on scroll for non hamburger screen sizes
@@ -60,6 +64,7 @@ console.log( "ready!" );
           // console.log("else");
           if (jQuery(document).scrollTop() > 1) {
             jQuery("#mega-menu-item-234").removeClass( "mega-toggle-on" )
+            jQuery("#mega-menu-item-539").removeClass( "mega-toggle-on" )
           }
           else {
           // do nothing
@@ -103,14 +108,14 @@ console.log( "ready!" );
           jQuery('.service-accordion').addClass("accordion-animation-done");  
         }, 2000);
         jQuery(this).removeClass("accordion-closed");
-        if (window.matchMedia('(max-width: 781px)').matches) {
+        if (window.matchMedia('(max-width: 1200px)').matches) {
           jQuery('html, body').animate({
-            scrollTop: jQuery(this).offset().top + -50
+            scrollTop: jQuery(this).offset().top + -5
           }, 1500);
         } 
         else {
           jQuery('html, body').animate({
-            scrollTop: jQuery(this).offset().top + -150
+            scrollTop: jQuery(this).offset().top + -100
           }, 1500);
         }
       }
@@ -119,12 +124,15 @@ console.log( "ready!" );
       }     
     });
 
-    jQuery(window).scroll(function() {
-      if (jQuery(".service-accordion").hasClass("accordion-animation-done")) {
-        jQuery('.service-accordion').css({"filter": "brightness(1)"}); 
-        jQuery('.service-accordion').removeClass("accordion-animation-done");
-      }
-    });
+    setInterval(function(){
+      jQuery(window).scroll(function() {
+        if (jQuery(".service-accordion").hasClass("accordion-animation-done")) {
+          jQuery('.service-accordion').css({"filter": "brightness(1)"}); 
+          jQuery('.service-accordion').removeClass("accordion-animation-done");
+        }
+      });
+     }, 3000);
+    
 
     jQuery('.service-accordion a').on("click",function() {
       console.log("Im hit");

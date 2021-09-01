@@ -139,7 +139,7 @@ Modified and used as a block pattern image.
 /* ============================================================================================================================================================== */
 
 body {
-    background: #1F1F1F;
+    background: #1F1F1F; 
     color: #4B4B4B;  
 }
 
@@ -1073,7 +1073,7 @@ a.mega-menu-link:active {
   }
 
   #mega-menu-primary {
-    padding: 50px 0 0 !important;
+    padding: 30px 0 0 !important;
   }
 
   #mega-menu-wrap-primary {
@@ -1381,6 +1381,8 @@ a.mega-menu-link:active {
   object-fit: cover;
   position: fixed;
   z-index: -999;
+  max-width: 100vw !important;
+  overflow-x: hidden;
 }
 
 /* .page-header figure {
@@ -1579,6 +1581,10 @@ a.mega-menu-link:active {
     line-height: 40px;  
   }
 
+  /* #what-we-bring img {
+    max-width: 75%;
+  } */
+
 }
 
 
@@ -1601,6 +1607,10 @@ a.mega-menu-link:active {
     font-size: 20px;
     line-height: 40px;
   } 
+
+  /* #what-we-bring img {
+    max-width: 60%;
+  } */
 
 }
 
@@ -1639,6 +1649,19 @@ a.mega-menu-link:active {
   .two-col_w-img-left p {
     font-size: 18px;
     line-height: 35px;
+  }
+
+  /* #what-we-bring img {
+    max-width: 50%;
+  } */
+
+  #here-for-you figure {
+    min-height: 340px;
+  }
+
+  #here-for-you img {
+    min-height: 340px;
+    object-fit: cover;
   }
 
 }
@@ -1730,6 +1753,11 @@ a.mega-menu-link:active {
 .wpforms-container-full .wpforms-form label.wpforms-error {
   color: #ff0000 !important;
   font-size: 16px !important;  
+}
+
+.wpforms-error.mailcheck-error a.mailcheck-suggestion {
+  color: #ff0000 !important;
+  font-size: 16px !important;   
 }
 
 /***** Contact form black ver *****/
@@ -2090,9 +2118,14 @@ a.mega-menu-link:active {
 
 @media only screen and (max-width: 781px) {
 
+  .home-header {
+    padding: 75px 0 !important;
+  }
+
   .home-header h1 strong {
     line-height: 60px;
   }  
+
 
 }
 
@@ -2546,6 +2579,7 @@ a.mega-menu-link:active {
   text-align: right;
   user-select: none;
   -webkit-user-select: none;
+  padding-left: 50px;
 }
 
 /* service boxes js and animation */
@@ -2624,8 +2658,18 @@ a.mega-menu-link:active {
 
 @media only screen and (max-width: 781px) {
 
+  .services h3 {
+    padding-left: 0px;
+  }
+
   .service-accordion > .wp-block-group__inner-container > .wp-block-group > .wp-block-group__inner-container {
-    margin-left: 40px !important;
+    margin-left: 25px !important;
+  }
+
+  .service-accordion.accordion-closed::after,
+  .service-accordion.accordion-open::after {
+    font-size: 40px;
+    left: 3.5%;
   }
 
 }
@@ -2827,8 +2871,8 @@ a.mega-menu-link:active {
   }
 
   .services h3 {
-    font-size: 48px;
-    line-height: 60px;
+    font-size: 40px;
+    line-height: 52px;
     text-align: left;
     margin-left: 0 !important;
   }
@@ -3073,7 +3117,7 @@ a.mega-menu-link:active {
   }
 
   100% {
-      transform: translateY(-3000px) rotate(720deg);
+      transform: translateY(-3500px) rotate(720deg);
       opacity: 1;
       border-radius: 50%;
       clip-path: polygon(17% -2%, 4% 110%, 156% 44%);
@@ -3085,6 +3129,62 @@ a.mega-menu-link:active {
 
   .sub-services .shards li:nth-child(odd) {
     display: none;
+  } 
+
+  .sub-services .shards li {
+    bottom: -300px;  
+  }
+
+  .sub-services .shards li:nth-child(2) {
+    animation-duration: 52s;
+    animation-delay: 10s;
+  } 
+
+  .sub-services .shards li:nth-child(4) {
+    animation-duration: 90s;
+    animation-delay: 28s;
+  } 
+
+  .sub-services .shards li:nth-child(6) {
+    animation-duration: 80s;
+    animation-delay: 15s;
+    left: 45%;
+  } 
+
+  .sub-services .shards li:nth-child(8) {
+    animation-duration: 60s;
+  } 
+
+  .sub-services .shards li:nth-child(10) {
+    animation-duration: 127s;
+    animation-delay: 36s;
+    left: 5%
+  } 
+
+  .sub-services .shards li:nth-child(12) {
+    animation-duration: 45s;
+    animation-delay: 10s;
+    left: 64%;
+  } 
+
+  .sub-services .shards li:nth-child(14) {
+    animation-duration: 70s;
+    animation-delay: 20s;
+  } 
+
+  .sub-services .shards li:nth-child(16) {
+    animation-duration: 50s;
+    animation-delay: 3s;
+  } 
+
+  .sub-services .shards li:nth-child(18) {
+    animation-duration: 73s;
+    animation-delay: 7s;
+  } 
+
+  .sub-services .shards li:nth-child(20) {
+    animation-duration: 160s;
+    animation-delay: 3s;
   } 
   
 
@@ -3278,6 +3378,7 @@ a.mega-menu-link:active {
     max-width: 95% !important;
     padding: 0 7.5%;
     margin-bottom: 0 !important;
+    margin-top: 30px !important;
   }
 
   .service h2 {
@@ -3799,6 +3900,46 @@ background: transparent;
 background: #000000a8 !important;
 }
 
+@media only screen and (max-width: 1200px) {
+
+  .contact-page h1 {
+    font-size: 55px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  .contact-page {
+    background: #252525;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+    .contact-page .non-profit-block {
+      background: url(imgs/contact-bg.jpg) #868686;
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: difference;
+      padding: 60px 40px;
+    }
+
+    .contact-page .non-profit-block p,
+    .contact-page .non-profit-block a {
+      color: #fff;
+    }
+
+  /* .contact-page {
+    background: url(imgs/contact-bg.jpg) #ffffff;
+    background-attachment: scroll;
+    background-repeat: unset;
+    background-size: cover;
+    background-position: center;
+  } */
+
+}
 
 /* ============================================================================================================================================================== */
 /* Non-Profit Page */
@@ -3908,7 +4049,9 @@ background: #000000a8 !important;
 }
 
 .studio-inner-page .page-header h1 a {
-  font-size: 30px;
+  font-size: 40px;
+  margin-top: 10px;
+  display: inline-block;
 }
 
 .studio-inner-page .page-header h1 strong {
@@ -3946,6 +4089,10 @@ background: #000000a8 !important;
 
   .studio-inner-page .page-header h1 strong {
     -webkit-text-stroke-width: 1px;
+  }
+
+  .studio-inner-page .page-header h1 a {
+    font-size: 30px;
   }
 
 }
