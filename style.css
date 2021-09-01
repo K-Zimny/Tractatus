@@ -2580,7 +2580,7 @@ a.mega-menu-link:active {
   z-index: 999;
   position: relative;
   filter: drop-shadow(1px 1px 5px black);
-  filter: brightness(1) !important;
+  /* filter: brightness(1) !important; */
 }
 
 .service-accordion.accordion-closed::after {
@@ -2607,7 +2607,7 @@ a.mega-menu-link:active {
   filter: drop-shadow(1px 1px 5px black);
   z-index: 9999999;
   transition: all ease .3s;
-  filter: brightness(1) !important;
+  filter: brightness(1);
 }
 
 .service-accordion.accordion-open::after {
@@ -2760,6 +2760,7 @@ a.mega-menu-link:active {
   color: #4A4A4A;
   padding: 10px 0;
   font-weight: bold;
+  pointer-events: all;
 }
 
 .services .services-container > .wp-block-group__inner-container a:after {
