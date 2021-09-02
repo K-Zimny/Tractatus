@@ -3142,7 +3142,7 @@ a.mega-menu-link:active {
 
   .sub-services .shards li {
     background: linear-gradient(#e66464, #9198e5);
-    opacity: .10;
+    opacity: .05;
     animation: none;
     bottom: 0px;
   }
@@ -3150,14 +3150,14 @@ a.mega-menu-link:active {
   .sub-services .shards li:nth-child(1){
     top: 50%;
     transform: rotate3d(1, 1, 1, 11deg);
-    opacity: .15;
+    opacity: .1;
   }
   
   
   .sub-services .shards li:nth-child(2){
     top: 21%;
     transform: rotate3d(1, 1, 1, 81deg);
-    opacity: .25;
+    opacity: .15;
   }
   
   .sub-services .shards li:nth-child(3){
@@ -3168,13 +3168,13 @@ a.mega-menu-link:active {
   .sub-services .shards li:nth-child(4){
     top: 87%;
     transform: rotate3d(1, 3, 1, 110deg);
-    opacity: .25;
+    opacity: .15;
   }
   
   .sub-services .shards li:nth-child(5){
     top: 24%;
     transform: rotate3d(1, 3, 1, 45deg);
-    opacity: .15;
+    opacity: .05;
   }
   
   .sub-services .shards li:nth-child(6){
@@ -3195,19 +3195,19 @@ a.mega-menu-link:active {
   .sub-services .shards li:nth-child(9){
     top: 41%;
     transform: rotate3d(1, 3, 1, 45deg);
-    opacity: .15;
+    opacity: .1;
   }
   
   .sub-services .shards li:nth-child(10){
     top: 63%;
     transform: rotate3d(1, 3, 1, 45deg);
-    opacity: .25;
+    opacity: .15;
   }
   
   .sub-services .shards li:nth-child(11){
     top: 93%;
     left: 75%;
-    opacity: .18;
+    opacity: .08;
   }
   
   .sub-services .shards li:nth-child(12){
@@ -3223,7 +3223,7 @@ a.mega-menu-link:active {
   .sub-services .shards li:nth-child(14){
     top: 71%;
     transform: rotate3d(1, 3, 1, 45deg);
-    opacity: .18;
+    opacity: .08;
   }
   
   .sub-services .shards li:nth-child(15){
@@ -3235,7 +3235,7 @@ a.mega-menu-link:active {
     top: 79%;
     left: 90%;
     transform: rotate3d(1, 3, 1, 45deg);
-    opacity: .25;
+    opacity: .15;
   }
   
   .sub-services .shards li:nth-child(17){
@@ -3246,7 +3246,7 @@ a.mega-menu-link:active {
   .sub-services .shards li:nth-child(18){
     top: 79%;
     transform: rotate3d(1, 3, 1, 45deg);
-    opacity: .18;
+    opacity: .08;
   }
   
   .sub-services .shards li:nth-child(19){
@@ -3257,70 +3257,9 @@ a.mega-menu-link:active {
   .sub-services .shards li:nth-child(20) {
     top: 22%;
     left: 12%;
-    transform: rotate3d(5, 3, 1, 345deg);
-    opacity: .25;
+    transform: rotate3d(5, 3, 1, 245deg);
+    opacity: .15;
   }
-
-  /* .sub-services .shards li:nth-child(odd) {
-    display: none;
-  } 
-
-  .sub-services .shards li {
-    bottom: -300px;  
-  }
-
-  .sub-services .shards li:nth-child(2) {
-    animation-duration: 52s;
-    animation-delay: 10s;
-  } 
-
-  .sub-services .shards li:nth-child(4) {
-    animation-duration: 90s;
-    animation-delay: 28s;
-  } 
-
-  .sub-services .shards li:nth-child(6) {
-    animation-duration: 80s;
-    animation-delay: 15s;
-    left: 45%;
-  } 
-
-  .sub-services .shards li:nth-child(8) {
-    animation-duration: 60s;
-  } 
-
-  .sub-services .shards li:nth-child(10) {
-    animation-duration: 127s;
-    animation-delay: 36s;
-    left: 5%
-  } 
-
-  .sub-services .shards li:nth-child(12) {
-    animation-duration: 45s;
-    animation-delay: 10s;
-    left: 64%;
-  } 
-
-  .sub-services .shards li:nth-child(14) {
-    animation-duration: 70s;
-    animation-delay: 20s;
-  } 
-
-  .sub-services .shards li:nth-child(16) {
-    animation-duration: 50s;
-    animation-delay: 3s;
-  } 
-
-  .sub-services .shards li:nth-child(18) {
-    animation-duration: 73s;
-    animation-delay: 7s;
-  } 
-
-  .sub-services .shards li:nth-child(20) {
-    animation-duration: 160s;
-    animation-delay: 3s;
-  }  */
-  
 
 } 
 
