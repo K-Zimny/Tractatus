@@ -1066,7 +1066,8 @@ a.mega-menu-link:active {
   /* mega menu */
   
   .primary-navigation {
-    height: 67px;
+    height: 75px;
+    display: block !important;
     width: 100%;
     left: 0;
     position: absolute;
@@ -1083,6 +1084,11 @@ a.mega-menu-link:active {
   #mega-menu-primary {
     border-bottom: 1px solid #FFDB79 !important;
   }
+
+  #mega-menu-wrap-primary .mega-menu-toggle {
+    height: 75px !important;
+  }
+
 
   #mega-menu-wrap-primary .mega-menu-toggle + #mega-menu-primary {
     transition: all ease .5s !important;
