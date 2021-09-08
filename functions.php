@@ -229,3 +229,21 @@ function add_js_script() {
 }
 add_action( 'wp_enqueue_scripts', 'add_js_script' );
 
+/*dequeue Deshicons for non admin users*/
+
+function wpdocs_dequeue_dashicon() {
+	if (current_user_can( 'update_core' )) {
+		return;
+	}
+	wp_deregister_style('dashicons');
+}
+add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_dashicon' );
+
+/*dequeue parent google fonts*/
+
+function parent_remove_google_fonts() {
+    wp_dequeue_style('seedlet-fonts');
+    wp_deregister_style('seedlet-fonts');
+}
+
+add_action('wp_enqueue_scripts', 'parent_remove_google_fonts', 100);
