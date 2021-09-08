@@ -218,7 +218,7 @@ add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 /*enqueue font*/
 
 function wpb_add_google_fonts() {
-	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap', array(), null );
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap', array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
 
