@@ -3959,7 +3959,7 @@ background-size: cover;
   position: absolute;
   left: 0;
   bottom: -10px;
-  height: 10px;
+  height: 5px;
   width: 60%;
   background: #1F1F1F;
   transition: all ease .3s;
@@ -4224,6 +4224,7 @@ background: #000000a8 !important;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #4B4B4B;
   font-size: 85px;
+  font-weight: 400;
   line-height: 114px;
   margin-bottom: 20px;
 }
