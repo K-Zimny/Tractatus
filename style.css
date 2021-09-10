@@ -4128,6 +4128,7 @@ background: #000000a8 !important;
 
 .studio-inner-page .wp-block-cover {
   align-items: center;
+  padding-top: 60px !important;
   padding-bottom: 60px !important;
 }
 
@@ -4174,6 +4175,11 @@ background: #000000a8 !important;
 /* media query */
 
 @media only screen and (max-width: 781px) {
+
+  .studio-inner-page .wp-block-cover {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
 
   .studio-inner-page .page-header h1 strong {
     -webkit-text-stroke-width: 1px;
@@ -4223,10 +4229,11 @@ background: #000000a8 !important;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #4B4B4B;
+  text-align: center;
   font-size: 85px;
   font-weight: 400;
   line-height: 114px;
-  margin-bottom: 20px;
+  margin-bottom: 65px;
 }
 
 .studio-project-card-flex-container > .wp-block-group__inner-container {
@@ -4251,6 +4258,8 @@ background: #000000a8 !important;
 }
 
 .studio-inner-page .studio-project-card-content > .wp-block-group__inner-container .wp-block-group:first-child p {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 40px;
   color: #4A4B4B;
   padding-left: 5%;
 }
@@ -4260,7 +4269,13 @@ background: #000000a8 !important;
 }
 
 .studio-inner-page .studio-project-card-content li {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 40px;
   color: #4A4B4B;
+}
+
+.studio-inner-page .studio-project-card-content a {
+  font-family: 'Montserrat', sans-serif;
 }
 
 /********** end studio Project Card ***********/
@@ -4275,8 +4290,6 @@ background: #000000a8 !important;
   }
 
 }
-
-
 
 @media only screen and (max-width: 1200px) {
 
@@ -4308,7 +4321,16 @@ background: #000000a8 !important;
     -webkit-text-stroke-width: 1.5px;
     font-size: 40px;
     line-height: 50px;  
+    margin-bottom: 25px;
   }  
+
+  .studio-inner-page .studio-project-card-content > .wp-block-group__inner-container .wp-block-group:first-child p {
+    line-height: 35px;
+  }
+
+  .studio-inner-page .studio-project-card-content li {
+    line-height: 35px;
+  }
 
 }
 
@@ -4342,7 +4364,22 @@ background: #000000a8 !important;
 .studio-inner-page .case-study-content p {
   font-family: 'Montserrat', sans-serif;
   color: #4A4B4B;
-  line-height: 40px;;
+  line-height: 40px;
+}
+
+.studio-inner-page .case-study-content a,
+.studio-inner-page .case-study-content a:visited {
+  font-family: 'Montserrat', sans-serif;
+  color: #4A4B4B;
+  line-height: 40px;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.studio-inner-page .case-study-content a:hover,
+.studio-inner-page .case-study-content a:active,
+.studio-inner-page .case-study-content a:visited {
+  text-decoration: none;
 }
 
 /* media Queries */
@@ -4367,12 +4404,16 @@ background: #000000a8 !important;
 }
 
 .studio-inner-page .non-profit-block h2 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 35px;
   line-height: 45px;
-  color: #1F1F1F 
+  color: #1F1F1F;
+  font-weight: 500;
 }
 
-.studio-inner-page .non-profit-block a {
+.studio-inner-page .non-profit-block a,
+.studio-inner-page .non-profit-block a:visited {
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   line-height: 30px;
   color: #1F1F1F;
